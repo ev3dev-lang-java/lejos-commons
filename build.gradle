@@ -1,0 +1,32 @@
+//Gradle file library ev3dev-lang-java // lejos-commons
+//Author: Juan Antonio Breña Moral
+//Last update: 29/01/2017
+
+version = '0.1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("org.projectlombok:lombok:1.16.8")
+    compile("ch.qos.logback:logback-classic:1.1.6")
+}
+
+//Compile
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+//Jar
+jar {
+    baseName = "${rootProject.name}"
+    manifest {
+        from file("${projectDir}/META-INF/MANIFEST.MF")
+    }
+}
