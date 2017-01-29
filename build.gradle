@@ -2,7 +2,7 @@
 //Author: Juan Antonio Breña Moral
 //Last update: 29/01/2017
 
-version = '0.1.0-SNAPSHOT'
+version = '0.1.0'
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
