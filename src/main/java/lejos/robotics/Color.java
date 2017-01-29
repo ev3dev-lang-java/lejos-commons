@@ -2,24 +2,23 @@ package lejos.robotics;
 
 /**
  * Representation of a color, used by color sensors and color detectors.
+ *
+ * Adapter to be integrated with EV3Dev.
+ *
+ * @author Juan Antonio Brenha Moral
  */
-public class Color {	
-	public static final int RED = 0;
-	public static final int GREEN = 1;
+public class Color {
+	public static final int NONE = 0;
+	public static final int BLACK = 1;
 	public static final int BLUE = 2;
-	public static final int YELLOW = 3;
+	public static final int GREEN = 3;
+	public static final int YELLOW = 4;
+	public static final int RED = 5;
+	public static final int WHITE = 6;
 	public static final int MAGENTA = 4;
 	public static final int ORANGE = 5;
-	public static final int WHITE = 6;
-    public static final int BLACK = 7;
-    public static final int PINK = 8;
-    public static final int GRAY = 9;
-    public static final int LIGHT_GRAY = 10;
-    public static final int DARK_GRAY = 11;
-    public static final int CYAN = 12;
-    public static final int BROWN = 13;
-    public static final int NONE = -1;
-	
+    public static final int BROWN = 7;
+
 	private int red;
 	private int blue;
 	private int green;
