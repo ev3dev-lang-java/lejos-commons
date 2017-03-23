@@ -22,10 +22,10 @@ public interface BaseMotor {
     void stop();
 
     /**
-    * Motor loses all power, causing the rotor to float freely to a stop.
-    * This is not the same as stopping, which locks the rotor.
-    */
-    void coast();
+     * Motor loses all power, causing the rotor to float freely to a stop.
+     * This is not the same as stopping, which locks the rotor.
+     */
+    void flt();
 
     /**
      * Removes power from the motor and creates a passive electrical load.
