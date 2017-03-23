@@ -15,13 +15,36 @@ public interface RegulatedMotor extends BaseMotor, Tachometer {
     //TODO method name sounds like listener is added to some list.
     // javadoc and method name should be changed such that they indicate that only one listener is supported.
     // suggested method name: setListener(...)
-    //public void addListener(RegulatedMotorListener listener);
+    public void addListener(RegulatedMotorListener listener);
 
 	/**
 	 * Removes the RegulatedMotorListener from this class.
 	 * @return The RegulatedMotorListener that was removed, if any. Null if none existed.
 	 */
-	//public RegulatedMotorListener removeListener();
+	public RegulatedMotorListener removeListener();
+
+    /**
+     * Causes motor to stop, pretty much
+     * instantaneously. In other words, the
+     * motor doesn't just stop; it will resist
+     * any further motion.
+     * Cancels any rotate() orders in progress
+     * @param immediateReturn if true do not wait for the motor to actually stop
+     */
+    public void stop(boolean immediateReturn);
+
+    /**
+     * Set the motor into float mode. This will stop the motor without braking
+     * and the position of the motor will not be maintained.
+     * @param immediateReturn If true do not wait for the motor to actually stop
+     */
+    public void flt(boolean immediateReturn);
+
+    /**
+     * Wait until the current movement operation is complete (this can include
+     * the motor stalling).
+     */
+    public void waitComplete();
 
     /**
     * causes motors to rotate through angle; <br>
@@ -92,7 +115,7 @@ public interface RegulatedMotor extends BaseMotor, Tachometer {
     *
     * @return the maximum speed of the Motor in degrees per second.
     */
-    //float getMaxSpeed();
+    float getMaxSpeed();
   
     /**
     * returns true if motors is stalled
@@ -114,7 +137,8 @@ public interface RegulatedMotor extends BaseMotor, Tachometer {
     * Set the required rate of acceleration degrees/s/s
     * @param acceleration
     */
-    //void setAcceleration(int acceleration);
+    void setAcceleration(int acceleration);
+
     /**
     * Specify a set of motors that should be kept in synchronization with this one.
     * The synchronization mechanism simply ensures that operations between a startSynchronization
@@ -124,17 +148,17 @@ public interface RegulatedMotor extends BaseMotor, Tachometer {
     * that reads of the motors state will also be consistent.
     * @param syncList an array of motors to synchronize with.
     */
-    //public void synchronizeWith(RegulatedMotor[] syncList);
+    public void synchronizeWith(RegulatedMotor[] syncList);
 
     /**
     * Begin a set of synchronized motors operations
     */
-    //public void startSynchronization();
+    public void startSynchronization();
 
     /**
     * Complete a set of synchronized motors operations.
     */
-    //public void endSynchronization();
+    public void endSynchronization();
 
     /**
     * Close the ports, the ports can not be used after this call.
