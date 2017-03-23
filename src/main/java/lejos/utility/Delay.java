@@ -1,12 +1,10 @@
 package lejos.utility;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * Simple collection of time delay routines that are non interruptable.
  * @author Andy
  */
-public @Slf4j class Delay {
+public class Delay {
 
     /**
      * Wait for the specified number of milliseconds.
@@ -15,7 +13,6 @@ public @Slf4j class Delay {
      * @param period time to wait in ms
      */
     public static void msDelay(long period) {
-        log.debug("Delay: {}", period);
         if (period <= 0) return;
         long end = System.currentTimeMillis() + period;
         boolean interrupted = false;
