@@ -1,5 +1,7 @@
-# v0.3.0 2017-03-23
+# v0.4.0 2017-03-23
 
+- Remove dependency logback & lombok
+- Review of Interface BaseMotor.java
 - Adding package /lejos/robotics/geometry
 - Adding package /lejos/robotics/subsumption
 - Adding more classes on /lejos/robotics 
