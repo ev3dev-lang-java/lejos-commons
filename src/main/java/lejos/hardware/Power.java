@@ -11,7 +11,7 @@ public interface Power {
      * The NXT/EV3 uses 6 batteries of 1500 mV each.
      * @return Battery voltage in mV. ~9000 = full.
      */
-    //public int getVoltageMilliVolt();
+    public int getVoltageMilliVolt();
 
     /**
      * The NXT uses 6 batteries of 1.5 V each.
@@ -29,5 +29,5 @@ public interface Power {
      * return the motor current draw
      * @return current in Amps
      */
-    //public float getMotorCurrent();
+    public float getMotorCurrent();
 }
