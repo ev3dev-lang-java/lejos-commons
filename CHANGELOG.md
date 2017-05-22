@@ -1,3 +1,8 @@
+# v0.5.0 2017-05-21
+
+- Adding Sounds & Audio
+- Adding Power
+
 # v0.4.0 2017-03-23
 
 - Remove dependency logback & lombok
