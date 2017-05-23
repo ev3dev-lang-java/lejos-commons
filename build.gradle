@@ -17,6 +17,6 @@ compileJava {
 jar {
     baseName = "${rootProject.name}"
     manifest {
-        from file("${projectDir}/META-INF/MANIFEST.MF")
+        from file("${projectDir}/src/main/resources/META-INF/MANIFEST.MF")
     }
 }
