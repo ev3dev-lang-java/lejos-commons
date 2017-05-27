@@ -26,7 +26,7 @@ public interface BaseMotor {
      * This is not the same as stopping, which locks the rotor.
      */
     void flt();
-    
+
     /**
     * Return <code>true</code> if the motors is moving.
     *
