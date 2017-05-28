@@ -6,7 +6,7 @@ package lejos.robotics;
  * 
  * @author dsturze
  */
-public interface RegulatedMotor extends BaseMotor, Tachometer {
+public interface RegulatedMotor extends BaseMotor, EV3DevBaseMotor, Tachometer {
 
     /**
     * Adds a listener object that will be notified when rotation has started or stopped
