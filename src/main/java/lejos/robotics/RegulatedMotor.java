@@ -4,7 +4,7 @@ package lejos.robotics;
  * Interface for encoded motors without limited range of movement (e.g. NXT motors).
  * TODO: Alternate names: EncodedMotor,EncoderMotor. 
  * 
- * @author dsturze
+ * @author dsturze, Juan Antonio Breña Moral
  */
 public interface RegulatedMotor extends BaseMotor, EV3DevBaseMotor, Tachometer {
 
