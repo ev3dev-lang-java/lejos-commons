@@ -10,7 +10,11 @@ library ev3classes. This library mix class for different purposes:
 This repository only manage the minimum set of classes to operate with EV3Dev and classes
 with general purpose.
 
-## References:
+## UML View
+
+![](https://github.com/ev3dev-lang-java/lejos-commons/raw/develop/docs/uml/graph.png)
+
+## References
 
 * LeJOS: http://www.lejos.org/
 * LeJOS docs: http://www.lejos.org/ev3/docs/
