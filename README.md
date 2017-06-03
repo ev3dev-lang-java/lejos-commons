@@ -1,12 +1,17 @@
 # ev3dev-lang-java // lejos-commons
 
-This library is a subset of classes from Original LeJOS repository to be used on the project EV3Dev-lang-java.
+In the third generation of LeJOS project, all classes are stored in the Java
+library ev3classes. This library mix class for different purposes:
 
-http://www.lejos.org/ev3/docs/
+- EV3 Interaction
+- Local navigation
+- Remoting
+
+This repository only manage the minimum set of classes to operate with EV3Dev and classes
+with general purpose.
 
 ## References:
 
 * LeJOS: http://www.lejos.org/
+* LeJOS docs: http://www.lejos.org/ev3/docs/
 * LeJOS Git: http://sourceforge.net/p/lejos/ev3/code/ci/master/tree/ 
-* EV3Dev: http://www.ev3dev.org/
-* EV3Dev // Getting Started: http://www.ev3dev.org/docs/getting-started/
