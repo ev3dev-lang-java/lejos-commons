@@ -9,8 +9,275 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// lejos.hardware.Audio
+	c0 [label=<<table title="lejos.hardware.Audio" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Audio </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + systemSound(aCode : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + playTone(aFrequency : int, aDuration : int, aVolume : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + playTone(freq : int, duration : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + playSample(file : File, vol : int) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + playSample(file : File) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + playSample(data : byte[], offset : int, len : int, freq : int, vol : int) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + playNote(inst : int[], freq : int, len : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setVolume(vol : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getVolume() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + loadSettings() </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.Key
+	c1 [label=<<table title="lejos.hardware.Key" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Key </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UP : int </td></tr>
+<tr><td align="left" balign="left"> + ENTER : int </td></tr>
+<tr><td align="left" balign="left"> + DOWN : int </td></tr>
+<tr><td align="left" balign="left"> + RIGHT : int </td></tr>
+<tr><td align="left" balign="left"> + LEFT : int </td></tr>
+<tr><td align="left" balign="left"> + ESCAPE : int </td></tr>
+<tr><td align="left" balign="left"> + KEY_RELEASED : int </td></tr>
+<tr><td align="left" balign="left"> + KEY_PRESSED : int </td></tr>
+<tr><td align="left" balign="left"> + KEY_PRESSED_AND_RELEASED : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getId() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isDown() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isUp() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + waitForPress() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + waitForPressAndRelease() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addKeyListener(listener : KeyListener) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + simulateEvent(event : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.KeyListener
+	c2 [label=<<table title="lejos.hardware.KeyListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> KeyListener </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + keyPressed(k : Key) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + keyReleased(k : Key) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.Keys
+	c3 [label=<<table title="lejos.hardware.Keys" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Keys </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ID_UP : int </td></tr>
+<tr><td align="left" balign="left"> + ID_ENTER : int </td></tr>
+<tr><td align="left" balign="left"> + ID_DOWN : int </td></tr>
+<tr><td align="left" balign="left"> + ID_RIGHT : int </td></tr>
+<tr><td align="left" balign="left"> + ID_LEFT : int </td></tr>
+<tr><td align="left" balign="left"> + ID_ESCAPE : int </td></tr>
+<tr><td align="left" balign="left"> + ID_ALL : int </td></tr>
+<tr><td align="left" balign="left"> + NUM_KEYS : int </td></tr>
+<tr><td align="left" balign="left"> + VOL_SETTING : String </td></tr>
+<tr><td align="left" balign="left"> + LEN_SETTING : String </td></tr>
+<tr><td align="left" balign="left"> + FREQ_SETTING : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + discardEvents() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + waitForAnyEvent() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + waitForAnyEvent(timeout : int) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + waitForAnyPress(timeout : int) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + waitForAnyPress() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getButtons() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + readButtons() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setKeyClickVolume(vol : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getKeyClickVolume() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setKeyClickLength(len : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getKeyClickLength() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setKeyClickTone(key : int, freq : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getKeyClickTone(key : int) : int </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.LED
+	c4 [label=<<table title="lejos.hardware.LED" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> LED </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setPattern(pattern : int) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.Power
+	c5 [label=<<table title="lejos.hardware.Power" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Power </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getVoltageMilliVolt() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getVoltage() : float </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getBatteryCurrent() : float </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMotorCurrent() : float </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.Sounds
+	c6 [label=<<table title="lejos.hardware.Sounds" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Sounds </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PIANO : int[] </td></tr>
+<tr><td align="left" balign="left"> + FLUTE : int[] </td></tr>
+<tr><td align="left" balign="left"> + XYLOPHONE : int[] </td></tr>
+<tr><td align="left" balign="left"> + BEEP : int </td></tr>
+<tr><td align="left" balign="left"> + DOUBLE_BEEP : int </td></tr>
+<tr><td align="left" balign="left"> + ASCENDING : int </td></tr>
+<tr><td align="left" balign="left"> + DESCENDING : int </td></tr>
+<tr><td align="left" balign="left"> + BUZZ : int </td></tr>
+<tr><td align="left" balign="left"> + VOL_MAX : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.lcd.CommonLCD
+	c7 [label=<<table title="lejos.hardware.lcd.CommonLCD" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> CommonLCD </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ROP_CLEAR : int </td></tr>
+<tr><td align="left" balign="left"> + ROP_AND : int </td></tr>
+<tr><td align="left" balign="left"> + ROP_ANDREVERSE : int </td></tr>
+<tr><td align="left" balign="left"> + ROP_COPY : int </td></tr>
+<tr><td align="left" balign="left"> + ROP_ANDINVERTED : int </td></tr>
+<tr><td align="left" balign="left"> + ROP_NOOP : int </td></tr>
+<tr><td align="left" balign="left"> + ROP_XOR : int </td></tr>
+<tr><td align="left" balign="left"> + ROP_OR : int </td></tr>
+<tr><td align="left" balign="left"> + ROP_NOR : int </td></tr>
+<tr><td align="left" balign="left"> + ROP_EQUIV : int </td></tr>
+<tr><td align="left" balign="left"> + ROP_INVERT : int </td></tr>
+<tr><td align="left" balign="left"> + ROP_ORREVERSE : int </td></tr>
+<tr><td align="left" balign="left"> + ROP_COPYINVERTED : int </td></tr>
+<tr><td align="left" balign="left"> + ROP_ORINVERTED : int </td></tr>
+<tr><td align="left" balign="left"> + ROP_NAND : int </td></tr>
+<tr><td align="left" balign="left"> + ROP_SET : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + refresh() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + clear() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getWidth() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getHeight() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDisplay() : byte[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getHWDisplay() : byte[] </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setContrast(contrast : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + bitBlt(src : byte[], sw : int, sh : int, sx : int, sy : int, dx : int, dy : int, w : int, h : int, rop : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + bitBlt(src : byte[], sw : int, sh : int, sx : int, sy : int, dst : byte[], dw : int, dh : int, dx : int, dy : int, w : int, h : int, rop : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setAutoRefresh(on : boolean) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setAutoRefreshPeriod(period : int) : int </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.lcd.GraphicsLCD
+	c8 [label=<<table title="lejos.hardware.lcd.GraphicsLCD" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> GraphicsLCD </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + TRANS_MIRROR : int </td></tr>
+<tr><td align="left" balign="left"> + TRANS_MIRROR_ROT180 : int </td></tr>
+<tr><td align="left" balign="left"> + TRANS_MIRROR_ROT270 : int </td></tr>
+<tr><td align="left" balign="left"> + TRANS_MIRROR_ROT90 : int </td></tr>
+<tr><td align="left" balign="left"> + TRANS_NONE : int </td></tr>
+<tr><td align="left" balign="left"> + TRANS_ROT180 : int </td></tr>
+<tr><td align="left" balign="left"> + TRANS_ROT270 : int </td></tr>
+<tr><td align="left" balign="left"> + TRANS_ROT90 : int </td></tr>
+<tr><td align="left" balign="left"> + HCENTER : int </td></tr>
+<tr><td align="left" balign="left"> + VCENTER : int </td></tr>
+<tr><td align="left" balign="left"> + LEFT : int </td></tr>
+<tr><td align="left" balign="left"> + RIGHT : int </td></tr>
+<tr><td align="left" balign="left"> + TOP : int </td></tr>
+<tr><td align="left" balign="left"> + BOTTOM : int </td></tr>
+<tr><td align="left" balign="left"> + BASELINE : int </td></tr>
+<tr><td align="left" balign="left"> + SOLID : int </td></tr>
+<tr><td align="left" balign="left"> + DOTTED : int </td></tr>
+<tr><td align="left" balign="left"> + BLACK : int </td></tr>
+<tr><td align="left" balign="left"> + WHITE : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setPixel(x : int, y : int, color : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getPixel(x : int, y : int) : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawString(str : String, x : int, y : int, anchor : int, inverted : boolean) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawString(str : String, x : int, y : int, anchor : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawSubstring(str : String, offset : int, len : int, x : int, y : int, anchor : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawChar(character : char, x : int, y : int, anchor : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawChars(data : char[], offset : int, length : int, x : int, y : int, anchor : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getStrokeStyle() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setStrokeStyle(style : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawRegionRop(src : Image, sx : int, sy : int, w : int, h : int, x : int, y : int, anchor : int, rop : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawRegionRop(src : Image, sx : int, sy : int, w : int, h : int, transform : int, x : int, y : int, anchor : int, rop : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawRegion(src : Image, sx : int, sy : int, w : int, h : int, transform : int, x : int, y : int, anchor : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawImage(src : Image, x : int, y : int, anchor : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawLine(x0 : int, y0 : int, x1 : int, y1 : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawArc(x : int, y : int, width : int, height : int, startAngle : int, arcAngle : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + fillArc(x : int, y : int, width : int, height : int, startAngle : int, arcAngle : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawRoundRect(x : int, y : int, width : int, height : int, arcWidth : int, arcHeight : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawRect(x : int, y : int, width : int, height : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + fillRect(x : int, y : int, w : int, h : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + copyArea(sx : int, sy : int, w : int, h : int, x : int, y : int, anchor : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getFont() : Font </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setFont(f : Font) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + translate(x : int, y : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getTranslateX() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getTranslateY() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setColor(rgb : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setColor(red : int, green : int, blue : int) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.lcd.TextLCD
+	c9 [label=<<table title="lejos.hardware.lcd.TextLCD" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> TextLCD </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawChar(c : char, x : int, y : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawString(str : String, x : int, y : int, inverted : boolean) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawString(str : String, x : int, y : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawInt(i : int, x : int, y : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + drawInt(i : int, places : int, x : int, y : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + clear(x : int, y : int, n : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + clear(y : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + scroll() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getFont() : Font </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getTextWidth() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getTextHeight() : int </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.hardware.port.MotorPort
-	c0 [label=<<table title="lejos.hardware.port.MotorPort" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c10 [label=<<table title="lejos.hardware.port.MotorPort" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MotorPort </td></tr>
@@ -26,7 +293,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.hardware.port.SensorPort
-	c1 [label=<<table title="lejos.hardware.port.SensorPort" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c11 [label=<<table title="lejos.hardware.port.SensorPort" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SensorPort </td></tr>
@@ -41,8 +308,39 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.Accelerometer
+	c12 [label=<<table title="lejos.robotics.Accelerometer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Accelerometer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getXAccel() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getYAccel() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getZAccel() : int </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.AccelerometerAdapter
+	c13 [label=<<table title="lejos.robotics.AccelerometerAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AccelerometerAdapter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> ~ sample : float[] </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AccelerometerAdapter(source : SampleProvider) </td></tr>
+<tr><td align="left" balign="left"> # getElement(index : int) : int </td></tr>
+<tr><td align="left" balign="left"> + getXAccel() : int </td></tr>
+<tr><td align="left" balign="left"> + getYAccel() : int </td></tr>
+<tr><td align="left" balign="left"> + getZAccel() : int </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.BaseMotor
-	c2 [label=<<table title="lejos.robotics.BaseMotor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c14 [label=<<table title="lejos.robotics.BaseMotor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> BaseMotor </td></tr>
@@ -54,14 +352,12 @@ digraph G {
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + forward() </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + backward() </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + stop() </font></td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + coast() </font></td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + brake() </font></td></tr>
-<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + hold() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + flt() </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isMoving() : boolean </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.Calibrate
-	c3 [label=<<table title="lejos.robotics.Calibrate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c15 [label=<<table title="lejos.robotics.Calibrate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Calibrate </td></tr>
@@ -75,26 +371,21 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.Color
-	c4 [label=<<table title="lejos.robotics.Color" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c16 [label=<<table title="lejos.robotics.Color" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Color </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + RED : int </td></tr>
-<tr><td align="left" balign="left"> + GREEN : int </td></tr>
+<tr><td align="left" balign="left"> + NONE : int </td></tr>
+<tr><td align="left" balign="left"> + BLACK : int </td></tr>
 <tr><td align="left" balign="left"> + BLUE : int </td></tr>
+<tr><td align="left" balign="left"> + GREEN : int </td></tr>
 <tr><td align="left" balign="left"> + YELLOW : int </td></tr>
+<tr><td align="left" balign="left"> + RED : int </td></tr>
+<tr><td align="left" balign="left"> + WHITE : int </td></tr>
 <tr><td align="left" balign="left"> + MAGENTA : int </td></tr>
 <tr><td align="left" balign="left"> + ORANGE : int </td></tr>
-<tr><td align="left" balign="left"> + WHITE : int </td></tr>
-<tr><td align="left" balign="left"> + BLACK : int </td></tr>
-<tr><td align="left" balign="left"> + PINK : int </td></tr>
-<tr><td align="left" balign="left"> + GRAY : int </td></tr>
-<tr><td align="left" balign="left"> + LIGHT_GRAY : int </td></tr>
-<tr><td align="left" balign="left"> + DARK_GRAY : int </td></tr>
-<tr><td align="left" balign="left"> + CYAN : int </td></tr>
 <tr><td align="left" balign="left"> + BROWN : int </td></tr>
-<tr><td align="left" balign="left"> + NONE : int </td></tr>
 <tr><td align="left" balign="left"> - red : int </td></tr>
 <tr><td align="left" balign="left"> - blue : int </td></tr>
 <tr><td align="left" balign="left"> - green : int </td></tr>
@@ -110,7 +401,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.ColorIdentifier
-	c5 [label=<<table title="lejos.robotics.ColorIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c17 [label=<<table title="lejos.robotics.ColorIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ColorIdentifier </td></tr>
@@ -123,7 +414,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.DCMotor
-	c6 [label=<<table title="lejos.robotics.DCMotor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c18 [label=<<table title="lejos.robotics.DCMotor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DCMotor </td></tr>
@@ -136,8 +427,56 @@ digraph G {
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getPower() : int </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.DirectionFinder
+	c19 [label=<<table title="lejos.robotics.DirectionFinder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> DirectionFinder </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getDegreesCartesian() : float </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + resetCartesianZero() </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.DirectionFinderAdapter
+	c20 [label=<<table title="lejos.robotics.DirectionFinderAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DirectionFinderAdapter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - calibrator : Calibrate </td></tr>
+<tr><td align="left" balign="left"> - provider : SampleProvider </td></tr>
+<tr><td align="left" balign="left"> - initialProvider : SampleProvider </td></tr>
+<tr><td align="left" balign="left"> - sample : float[] </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DirectionFinderAdapter(provider : SampleProvider) </td></tr>
+<tr><td align="left" balign="left"> + getDegreesCartesian() : float </td></tr>
+<tr><td align="left" balign="left"> + startCalibration() </td></tr>
+<tr><td align="left" balign="left"> + stopCalibration() </td></tr>
+<tr><td align="left" balign="left"> + resetCartesianZero() </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.EV3DevBaseMotor
+	c21 [label=<<table title="lejos.robotics.EV3DevBaseMotor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> EV3DevBaseMotor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + coast() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + brake() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + hold() </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.Encoder
-	c7 [label=<<table title="lejos.robotics.Encoder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c22 [label=<<table title="lejos.robotics.Encoder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Encoder </td></tr>
@@ -150,8 +489,24 @@ digraph G {
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + resetTachoCount() </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.Gyroscope
+	c23 [label=<<table title="lejos.robotics.Gyroscope" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Gyroscope </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAngularVelocity() : float </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + recalibrateOffset() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAngle() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + reset() </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.LampController
-	c8 [label=<<table title="lejos.robotics.LampController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c24 [label=<<table title="lejos.robotics.LampController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> LampController </td></tr>
@@ -166,8 +521,104 @@ digraph G {
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setFloodlight(color : int) : boolean </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.LightDetector
+	c25 [label=<<table title="lejos.robotics.LightDetector" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> LightDetector </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLightValue() : float </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getNormalizedLightValue() : float </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getHigh() : float </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getLow() : float </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.RangeFinder
+	c26 [label=<<table title="lejos.robotics.RangeFinder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> RangeFinder </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getRange() : float </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getRanges() : float[] </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.RangeFinderAdapter
+	c27 [label=<<table title="lejos.robotics.RangeFinderAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> RangeFinderAdapter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - buf : float[] </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + RangeFinderAdapter(source : SampleProvider) </td></tr>
+<tr><td align="left" balign="left"> + getRange() : float </td></tr>
+<tr><td align="left" balign="left"> + getRanges() : float[] </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.RangeReading
+	c28 [label=<<table title="lejos.robotics.RangeReading" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> RangeReading </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - range : float </td></tr>
+<tr><td align="left" balign="left"> - angle : float </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + RangeReading(angle : float, range : float) </td></tr>
+<tr><td align="left" balign="left"> + getRange() : float </td></tr>
+<tr><td align="left" balign="left"> + getAngle() : float </td></tr>
+<tr><td align="left" balign="left"> + invalidReading() : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.RangeReadings
+	c29 [label=<<table title="lejos.robotics.RangeReadings" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> RangeReadings </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + RangeReadings(numReadings : int) </td></tr>
+<tr><td align="left" balign="left"> + getRange(i : int) : float </td></tr>
+<tr><td align="left" balign="left"> + getRange(angle : float) : float </td></tr>
+<tr><td align="left" balign="left"> + getAngle(index : int) : float </td></tr>
+<tr><td align="left" balign="left"> + incomplete() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getNumReadings() : int </td></tr>
+<tr><td align="left" balign="left"> + setRange(index : int, angle : float, range : float) </td></tr>
+<tr><td align="left" balign="left"> + dumpObject(dos : DataOutputStream) </td></tr>
+<tr><td align="left" balign="left"> + loadObject(dis : DataInputStream) </td></tr>
+<tr><td align="left" balign="left"> + printReadings() </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.RangeScanner
+	c30 [label=<<table title="lejos.robotics.RangeScanner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> RangeScanner </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getRangeValues() : RangeReadings </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setAngles(angles : float[]) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getRangeFinder() : RangeFinder </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.RegulatedMotor
-	c9 [label=<<table title="lejos.robotics.RegulatedMotor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c31 [label=<<table title="lejos.robotics.RegulatedMotor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RegulatedMotor </td></tr>
@@ -176,17 +627,41 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + addListener(listener : RegulatedMotorListener) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + removeListener() : RegulatedMotorListener </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + stop(immediateReturn : boolean) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + flt(immediateReturn : boolean) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + waitComplete() </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + rotate(angle : int, immediateReturn : boolean) </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + rotate(angle : int) </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + rotateTo(limitAngle : int) </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + rotateTo(limitAngle : int, immediateReturn : boolean) </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setSpeed(speed : int) </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getSpeed() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMaxSpeed() : float </font></td></tr>
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isStalled() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setAcceleration(acceleration : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + synchronizeWith(syncList : RegulatedMotor[]) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + startSynchronization() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + endSynchronization() </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.RegulatedMotorListener
+	c32 [label=<<table title="lejos.robotics.RegulatedMotorListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> RegulatedMotorListener </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + rotationStarted(motor : RegulatedMotor, tachoCount : int, stalled : boolean, timeStamp : long) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + rotationStopped(motor : RegulatedMotor, tachoCount : int, stalled : boolean, timeStamp : long) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.SampleProvider
-	c10 [label=<<table title="lejos.robotics.SampleProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c33 [label=<<table title="lejos.robotics.SampleProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SampleProvider </td></tr>
@@ -200,7 +675,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.Tachometer
-	c11 [label=<<table title="lejos.robotics.Tachometer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c34 [label=<<table title="lejos.robotics.Tachometer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Tachometer </td></tr>
@@ -212,8 +687,35 @@ digraph G {
 <tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getRotationSpeed() : int </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.Touch
+	c35 [label=<<table title="lejos.robotics.Touch" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Touch </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isPressed() : boolean </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.Transmittable
+	c36 [label=<<table title="lejos.robotics.Transmittable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Transmittable </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + dumpObject(dos : DataOutputStream) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + loadObject(dis : DataInputStream) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.AbstractCalibrationFilter
-	c12 [label=<<table title="lejos.robotics.filter.AbstractCalibrationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c37 [label=<<table title="lejos.robotics.filter.AbstractCalibrationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractCalibrationFilter </font></td></tr>
 		</table></td></tr>
@@ -247,7 +749,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.AbstractCalibrationFilter.CalibrationFileException
-	c13 [label=<<table title="lejos.robotics.filter.AbstractCalibrationFilter.CalibrationFileException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c38 [label=<<table title="lejos.robotics.filter.AbstractCalibrationFilter.CalibrationFileException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CalibrationFileException </td></tr>
 		</table></td></tr>
@@ -259,7 +761,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.AbstractFilter
-	c14 [label=<<table title="lejos.robotics.filter.AbstractFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c39 [label=<<table title="lejos.robotics.filter.AbstractFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractFilter </font></td></tr>
 		</table></td></tr>
@@ -274,7 +776,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.ConcatenationFilter
-	c15 [label=<<table title="lejos.robotics.filter.ConcatenationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c40 [label=<<table title="lejos.robotics.filter.ConcatenationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConcatenationFilter </td></tr>
 		</table></td></tr>
@@ -289,7 +791,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.FilterTerminal
-	c16 [label=<<table title="lejos.robotics.filter.FilterTerminal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c41 [label=<<table title="lejos.robotics.filter.FilterTerminal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FilterTerminal </td></tr>
 		</table></td></tr>
@@ -307,7 +809,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.IntegrationFilter
-	c17 [label=<<table title="lejos.robotics.filter.IntegrationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c42 [label=<<table title="lejos.robotics.filter.IntegrationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> IntegrationFilter </td></tr>
 		</table></td></tr>
@@ -323,7 +825,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.LinearCalibrationFilter
-	c18 [label=<<table title="lejos.robotics.filter.LinearCalibrationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c43 [label=<<table title="lejos.robotics.filter.LinearCalibrationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LinearCalibrationFilter </td></tr>
 		</table></td></tr>
@@ -359,7 +861,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.LowPassFilter
-	c19 [label=<<table title="lejos.robotics.filter.LowPassFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c44 [label=<<table title="lejos.robotics.filter.LowPassFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LowPassFilter </td></tr>
 		</table></td></tr>
@@ -375,7 +877,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.MaximumFilter
-	c20 [label=<<table title="lejos.robotics.filter.MaximumFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c45 [label=<<table title="lejos.robotics.filter.MaximumFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MaximumFilter </td></tr>
 		</table></td></tr>
@@ -390,7 +892,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.MeanFilter
-	c21 [label=<<table title="lejos.robotics.filter.MeanFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c46 [label=<<table title="lejos.robotics.filter.MeanFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MeanFilter </td></tr>
 		</table></td></tr>
@@ -403,7 +905,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.MedianFilter
-	c22 [label=<<table title="lejos.robotics.filter.MedianFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c47 [label=<<table title="lejos.robotics.filter.MedianFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MedianFilter </td></tr>
 		</table></td></tr>
@@ -416,7 +918,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.MinimumFilter
-	c23 [label=<<table title="lejos.robotics.filter.MinimumFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c48 [label=<<table title="lejos.robotics.filter.MinimumFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MinimumFilter </td></tr>
 		</table></td></tr>
@@ -431,7 +933,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.ModulusFilter
-	c24 [label=<<table title="lejos.robotics.filter.ModulusFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c49 [label=<<table title="lejos.robotics.filter.ModulusFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ModulusFilter </td></tr>
 		</table></td></tr>
@@ -446,7 +948,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.OffsetCorrectionFilter
-	c25 [label=<<table title="lejos.robotics.filter.OffsetCorrectionFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c50 [label=<<table title="lejos.robotics.filter.OffsetCorrectionFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OffsetCorrectionFilter </td></tr>
 		</table></td></tr>
@@ -476,7 +978,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.PublishedSource
-	c26 [label=<<table title="lejos.robotics.filter.PublishedSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c51 [label=<<table title="lejos.robotics.filter.PublishedSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PublishedSource </td></tr>
 		</table></td></tr>
@@ -517,7 +1019,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.PublishedSource.Listener
-	c27 [label=<<table title="lejos.robotics.filter.PublishedSource.Listener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c52 [label=<<table title="lejos.robotics.filter.PublishedSource.Listener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Listener </td></tr>
 		</table></td></tr>
@@ -530,7 +1032,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SampleBuffer
-	c28 [label=<<table title="lejos.robotics.filter.SampleBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c53 [label=<<table title="lejos.robotics.filter.SampleBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SampleBuffer </font></td></tr>
 		</table></td></tr>
@@ -551,7 +1053,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SampleThread
-	c29 [label=<<table title="lejos.robotics.filter.SampleThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c54 [label=<<table title="lejos.robotics.filter.SampleThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SampleThread </td></tr>
 		</table></td></tr>
@@ -573,7 +1075,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SampleThread.Runner
-	c30 [label=<<table title="lejos.robotics.filter.SampleThread.Runner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c55 [label=<<table title="lejos.robotics.filter.SampleThread.Runner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Runner </td></tr>
 		</table></td></tr>
@@ -586,7 +1088,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SliceFilter
-	c31 [label=<<table title="lejos.robotics.filter.SliceFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c56 [label=<<table title="lejos.robotics.filter.SliceFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SliceFilter </td></tr>
 		</table></td></tr>
@@ -601,7 +1103,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SubscribedProvider
-	c32 [label=<<table title="lejos.robotics.filter.SubscribedProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c57 [label=<<table title="lejos.robotics.filter.SubscribedProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SubscribedProvider </td></tr>
 		</table></td></tr>
@@ -629,7 +1131,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SumFilter
-	c33 [label=<<table title="lejos.robotics.filter.SumFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c58 [label=<<table title="lejos.robotics.filter.SumFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SumFilter </td></tr>
 		</table></td></tr>
@@ -643,7 +1145,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SumFilter.PlainSum
-	c34 [label=<<table title="lejos.robotics.filter.SumFilter.PlainSum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c59 [label=<<table title="lejos.robotics.filter.SumFilter.PlainSum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PlainSum </td></tr>
 		</table></td></tr>
@@ -656,7 +1158,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SumFilter.SmartSum
-	c35 [label=<<table title="lejos.robotics.filter.SumFilter.SmartSum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c60 [label=<<table title="lejos.robotics.filter.SumFilter.SmartSum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SmartSum </td></tr>
 		</table></td></tr>
@@ -674,7 +1176,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.ZeroFilter
-	c36 [label=<<table title="lejos.robotics.filter.ZeroFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c61 [label=<<table title="lejos.robotics.filter.ZeroFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ZeroFilter </td></tr>
 		</table></td></tr>
@@ -687,8 +1189,448 @@ digraph G {
 <tr><td align="left" balign="left"> + fetchSample(sample : float[], offset : int) </td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.geometry.Line
+	c62 [label=<<table title="lejos.robotics.geometry.Line" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Line </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Line(x1 : float, y1 : float, x2 : float, y2 : float) </td></tr>
+<tr><td align="left" balign="left"> + intersectsAt(l : Line) : Point </td></tr>
+<tr><td align="left" balign="left"> + segDist(seg : Line) : double </td></tr>
+<tr><td align="left" balign="left"> - between(x : float, x1 : float, x2 : float) : boolean </td></tr>
+<tr><td align="left" balign="left"> + lengthen(delta : float) </td></tr>
+<tr><td align="left" balign="left"> + length() : float </td></tr>
+<tr><td align="left" balign="left"> + getP1() : Point </td></tr>
+<tr><td align="left" balign="left"> + getP2() : Point </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.geometry.Line2D
+	c63 [label=<<table title="lejos.robotics.geometry.Line2D" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Line2D </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # Line2D() </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getX1() : double </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getY1() : double </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getP1() : Point2D </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getX2() : double </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getY2() : double </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getP2() : Point2D </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setLine(x1 : double, y1 : double, x2 : double, y2 : double) </font></td></tr>
+<tr><td align="left" balign="left"> + setLine(p1 : Point2D, p2 : Point2D) </td></tr>
+<tr><td align="left" balign="left"> + setLine(line : Line2D) </td></tr>
+<tr><td align="left" balign="left"> + contains(x : double, y : double) : boolean </td></tr>
+<tr><td align="left" balign="left"> + contains(p : Point2D) : boolean </td></tr>
+<tr><td align="left" balign="left"> + contains(x : double, y : double, w : double, h : double) : boolean </td></tr>
+<tr><td align="left" balign="left"> + contains(r : Rectangle2D) : boolean </td></tr>
+<tr><td align="left" balign="left"> + intersects(x : double, y : double, w : double, h : double) : boolean </td></tr>
+<tr><td align="left" balign="left"> + intersectsLine(x1 : double, y1 : double, x2 : double, y2 : double) : boolean </td></tr>
+<tr><td align="left" balign="left"> + intersectsLine(l : Line2D) : boolean </td></tr>
+<tr><td align="left" balign="left"> + linesIntersect(x1 : double, y1 : double, x2 : double, y2 : double, x3 : double, y3 : double, x4 : double, y4 : double) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getBounds() : RectangleInt32 </td></tr>
+<tr><td align="left" balign="left"> + clone() : Object </td></tr>
+<tr><td align="left" balign="left"> + relativeCCW(x1 : double, y1 : double, x2 : double, y2 : double, px : double, py : double) : int </td></tr>
+<tr><td align="left" balign="left"> + relativeCCW(p : Point2D) : int </td></tr>
+<tr><td align="left" balign="left"> + relativeCCW(px : double, py : double) : int </td></tr>
+<tr><td align="left" balign="left"> + intersects(r : Rectangle2D) : boolean </td></tr>
+<tr><td align="left" balign="left"> + ptSegDistSq(x1 : double, y1 : double, x2 : double, y2 : double, px : double, py : double) : double </td></tr>
+<tr><td align="left" balign="left"> + ptSegDist(x1 : double, y1 : double, x2 : double, y2 : double, px : double, py : double) : double </td></tr>
+<tr><td align="left" balign="left"> + ptSegDistSq(px : double, py : double) : double </td></tr>
+<tr><td align="left" balign="left"> + ptSegDistSq(p : Point2D) : double </td></tr>
+<tr><td align="left" balign="left"> + ptSegDist(px : double, py : double) : double </td></tr>
+<tr><td align="left" balign="left"> + ptSegDist(p : Point2D) : double </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.geometry.Line2D.Float
+	c64 [label=<<table title="lejos.robotics.geometry.Line2D.Float" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Float </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + x1 : float </td></tr>
+<tr><td align="left" balign="left"> + y1 : float </td></tr>
+<tr><td align="left" balign="left"> + x2 : float </td></tr>
+<tr><td align="left" balign="left"> + y2 : float </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Float() </td></tr>
+<tr><td align="left" balign="left"> + Float(x1 : float, y1 : float, x2 : float, y2 : float) </td></tr>
+<tr><td align="left" balign="left"> + setLine(x1 : float, y1 : float, x2 : float, y2 : float) </td></tr>
+<tr><td align="left" balign="left"> + getBounds2D() : Rectangle2D </td></tr>
+<tr><td align="left" balign="left"> + getX1() : double </td></tr>
+<tr><td align="left" balign="left"> + getY1() : double </td></tr>
+<tr><td align="left" balign="left"> + getP1() : Point2D </td></tr>
+<tr><td align="left" balign="left"> + getX2() : double </td></tr>
+<tr><td align="left" balign="left"> + getY2() : double </td></tr>
+<tr><td align="left" balign="left"> + getP2() : Point2D </td></tr>
+<tr><td align="left" balign="left"> + setLine(x1 : double, y1 : double, x2 : double, y2 : double) </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.geometry.Line2D.Double
+	c65 [label=<<table title="lejos.robotics.geometry.Line2D.Double" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Double </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + x1 : double </td></tr>
+<tr><td align="left" balign="left"> + y1 : double </td></tr>
+<tr><td align="left" balign="left"> + x2 : double </td></tr>
+<tr><td align="left" balign="left"> + y2 : double </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Double() </td></tr>
+<tr><td align="left" balign="left"> + Double(x1 : double, y1 : double, x2 : double, y2 : double) </td></tr>
+<tr><td align="left" balign="left"> + getX1() : double </td></tr>
+<tr><td align="left" balign="left"> + getY1() : double </td></tr>
+<tr><td align="left" balign="left"> + getP1() : Point2D </td></tr>
+<tr><td align="left" balign="left"> + getX2() : double </td></tr>
+<tr><td align="left" balign="left"> + getY2() : double </td></tr>
+<tr><td align="left" balign="left"> + getP2() : Point2D </td></tr>
+<tr><td align="left" balign="left"> + setLine(x1 : double, y1 : double, x2 : double, y2 : double) </td></tr>
+<tr><td align="left" balign="left"> + getBounds2D() : Rectangle2D </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.geometry.Point
+	c66 [label=<<table title="lejos.robotics.geometry.Point" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Point </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Point(x : float, y : float) </td></tr>
+<tr><td align="left" balign="left"> + Point(radians : float) </td></tr>
+<tr><td align="left" balign="left"> + angleTo(p : Point) : float </td></tr>
+<tr><td align="left" balign="left"> + translate(dx : float, dy : float) </td></tr>
+<tr><td align="left" balign="left"> + copyTo(p : Point) : Point </td></tr>
+<tr><td align="left" balign="left"> + clone() : Point </td></tr>
+<tr><td align="left" balign="left"> + add(other : Point) : Point </td></tr>
+<tr><td align="left" balign="left"> + addWith(other : Point) : Point </td></tr>
+<tr><td align="left" balign="left"> + moveTo(other : Point) </td></tr>
+<tr><td align="left" balign="left"> + subtract(other : Point) : Point </td></tr>
+<tr><td align="left" balign="left"> + subtract(length : float) : Point </td></tr>
+<tr><td align="left" balign="left"> + multiply(scale : float) : Point </td></tr>
+<tr><td align="left" balign="left"> + getNormalized() : Point </td></tr>
+<tr><td align="left" balign="left"> + reverse() : Point </td></tr>
+<tr><td align="left" balign="left"> + projectOn(line : Line) : Point </td></tr>
+<tr><td align="left" balign="left"> + angle() : float </td></tr>
+<tr><td align="left" balign="left"> + leftOrth() : Point </td></tr>
+<tr><td align="left" balign="left"> + rightOrth() : Point </td></tr>
+<tr><td align="left" balign="left"> + subtractWith(other : Point) : Point </td></tr>
+<tr><td align="left" balign="left"> + multiplyBy(scale : float) : Point </td></tr>
+<tr><td align="left" balign="left"> + length() : float </td></tr>
+<tr><td align="left" balign="left"> + normalize() : Point </td></tr>
+<tr><td align="left" balign="left"> + makeLeftOrth() : Point </td></tr>
+<tr><td align="left" balign="left"> + makeRightOrth() : Point </td></tr>
+<tr><td align="left" balign="left"> + dotProduct(other : Point) : float </td></tr>
+<tr><td align="left" balign="left"> + pointAt(distance : float, angle : float) : Point </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.geometry.Point2D
+	c67 [label=<<table title="lejos.robotics.geometry.Point2D" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Point2D </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # Point2D() </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getX() : double </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getY() : double </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setLocation(x : double, y : double) </font></td></tr>
+<tr><td align="left" balign="left"> + setLocation(p : Point2D) </td></tr>
+<tr><td align="left" balign="left"> + distanceSq(x1 : double, y1 : double, x2 : double, y2 : double) : double </td></tr>
+<tr><td align="left" balign="left"> + distance(x1 : double, y1 : double, x2 : double, y2 : double) : double </td></tr>
+<tr><td align="left" balign="left"> + distanceSq(px : double, py : double) : double </td></tr>
+<tr><td align="left" balign="left"> + distanceSq(pt : Point2D) : double </td></tr>
+<tr><td align="left" balign="left"> + distance(px : double, py : double) : double </td></tr>
+<tr><td align="left" balign="left"> + distance(pt : Point2D) : double </td></tr>
+<tr><td align="left" balign="left"> + equals(obj : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + clone() : Object </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.geometry.Point2D.Float
+	c68 [label=<<table title="lejos.robotics.geometry.Point2D.Float" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Float </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + x : float </td></tr>
+<tr><td align="left" balign="left"> + y : float </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Float() </td></tr>
+<tr><td align="left" balign="left"> + Float(x : float, y : float) </td></tr>
+<tr><td align="left" balign="left"> + getX() : double </td></tr>
+<tr><td align="left" balign="left"> + getY() : double </td></tr>
+<tr><td align="left" balign="left"> + setLocation(x : double, y : double) </td></tr>
+<tr><td align="left" balign="left"> + setLocation(x : float, y : float) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.geometry.Point2D.Double
+	c69 [label=<<table title="lejos.robotics.geometry.Point2D.Double" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Double </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + x : double </td></tr>
+<tr><td align="left" balign="left"> + y : double </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Double() </td></tr>
+<tr><td align="left" balign="left"> + Double(x : double, y : double) </td></tr>
+<tr><td align="left" balign="left"> + getX() : double </td></tr>
+<tr><td align="left" balign="left"> + getY() : double </td></tr>
+<tr><td align="left" balign="left"> + setLocation(x : double, y : double) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.geometry.Rectangle
+	c70 [label=<<table title="lejos.robotics.geometry.Rectangle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Rectangle </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Rectangle(x : float, y : float, w : float, h : float) </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.geometry.Rectangle2D
+	c71 [label=<<table title="lejos.robotics.geometry.Rectangle2D" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Rectangle2D </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + OUT_LEFT : int </td></tr>
+<tr><td align="left" balign="left"> + OUT_TOP : int </td></tr>
+<tr><td align="left" balign="left"> + OUT_RIGHT : int </td></tr>
+<tr><td align="left" balign="left"> + OUT_BOTTOM : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # Rectangle2D() </td></tr>
+<tr><td align="left" balign="left"> + contains(x : double, y : double, w : double, h : double) : boolean </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setRect(x : double, y : double, w : double, h : double) </font></td></tr>
+<tr><td align="left" balign="left"> + setRect(r : Rectangle2D) </td></tr>
+<tr><td align="left" balign="left"> + setFrame(x : double, y : double, w : double, h : double) </td></tr>
+<tr><td align="left" balign="left"> + contains(x : double, y : double) : boolean </td></tr>
+<tr><td align="left" balign="left"> + intersects(x : double, y : double, w : double, h : double) : boolean </td></tr>
+<tr><td align="left" balign="left"> + intersectsLine(x1 : double, y1 : double, x2 : double, y2 : double) : boolean </td></tr>
+<tr><td align="left" balign="left"> + outcode(p : Point2D) : int </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + outcode(x : double, y : double) : int </font></td></tr>
+<tr><td align="left" balign="left"> + equals(obj : Object) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.geometry.Rectangle2D.Float
+	c72 [label=<<table title="lejos.robotics.geometry.Rectangle2D.Float" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Float </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + x : float </td></tr>
+<tr><td align="left" balign="left"> + y : float </td></tr>
+<tr><td align="left" balign="left"> + width : float </td></tr>
+<tr><td align="left" balign="left"> + height : float </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Float() </td></tr>
+<tr><td align="left" balign="left"> + Float(x : float, y : float, width : float, height : float) </td></tr>
+<tr><td align="left" balign="left"> + getX() : double </td></tr>
+<tr><td align="left" balign="left"> + getY() : double </td></tr>
+<tr><td align="left" balign="left"> + getWidth() : double </td></tr>
+<tr><td align="left" balign="left"> + getHeight() : double </td></tr>
+<tr><td align="left" balign="left"> + isEmpty() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getBounds2D() : Rectangle2D </td></tr>
+<tr><td align="left" balign="left"> + setRect(x : float, y : float, w : float, h : float) </td></tr>
+<tr><td align="left" balign="left"> + setRect(r : Rectangle2D) </td></tr>
+<tr><td align="left" balign="left"> + setRect(x : double, y : double, w : double, h : double) </td></tr>
+<tr><td align="left" balign="left"> + outcode(x : double, y : double) : int </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.geometry.Rectangle2D.Double
+	c73 [label=<<table title="lejos.robotics.geometry.Rectangle2D.Double" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Double </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + x : double </td></tr>
+<tr><td align="left" balign="left"> + y : double </td></tr>
+<tr><td align="left" balign="left"> + width : double </td></tr>
+<tr><td align="left" balign="left"> + height : double </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Double() </td></tr>
+<tr><td align="left" balign="left"> + Double(x : double, y : double, width : double, height : double) </td></tr>
+<tr><td align="left" balign="left"> + getX() : double </td></tr>
+<tr><td align="left" balign="left"> + getY() : double </td></tr>
+<tr><td align="left" balign="left"> + getWidth() : double </td></tr>
+<tr><td align="left" balign="left"> + getHeight() : double </td></tr>
+<tr><td align="left" balign="left"> + isEmpty() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setFrame(x : double, y : double, w : double, h : double) </td></tr>
+<tr><td align="left" balign="left"> + getBounds2D() : Rectangle2D </td></tr>
+<tr><td align="left" balign="left"> + setRect(x : double, y : double, w : double, h : double) </td></tr>
+<tr><td align="left" balign="left"> + setRect(r : Rectangle2D) </td></tr>
+<tr><td align="left" balign="left"> + outcode(x : double, y : double) : int </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.geometry.RectangleInt32
+	c74 [label=<<table title="lejos.robotics.geometry.RectangleInt32" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> RectangleInt32 </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + height : int </td></tr>
+<tr><td align="left" balign="left"> + width : int </td></tr>
+<tr><td align="left" balign="left"> + x : int </td></tr>
+<tr><td align="left" balign="left"> + y : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + RectangleInt32(x : int, y : int, width : int, height : int) </td></tr>
+<tr><td align="left" balign="left"> + RectangleInt32(width : int, height : int) </td></tr>
+<tr><td align="left" balign="left"> + RectangleInt32() </td></tr>
+<tr><td align="left" balign="left"> + RectangleInt32(p : Point) </td></tr>
+<tr><td align="left" balign="left"> + getX() : double </td></tr>
+<tr><td align="left" balign="left"> + getY() : double </td></tr>
+<tr><td align="left" balign="left"> + getWidth() : double </td></tr>
+<tr><td align="left" balign="left"> + getHeight() : double </td></tr>
+<tr><td align="left" balign="left"> + setLocation(x : int, y : int) </td></tr>
+<tr><td align="left" balign="left"> + setLocation(p : Point) </td></tr>
+<tr><td align="left" balign="left"> + isEmpty() : boolean </td></tr>
+<tr><td align="left" balign="left"> + contains(x : int, y : int) : boolean </td></tr>
+<tr><td align="left" balign="left"> + contains(p : Point) : boolean </td></tr>
+<tr><td align="left" balign="left"> + contains(r : RectangleInt32) : boolean </td></tr>
+<tr><td align="left" balign="left"> + intersects(r : RectangleInt32) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getBounds() : RectangleInt32 </td></tr>
+<tr><td align="left" balign="left"> + getBounds2D() : Rectangle2D </td></tr>
+<tr><td align="left" balign="left"> + setBounds(x : int, y : int, width : int, height : int) </td></tr>
+<tr><td align="left" balign="left"> + setBounds(r : RectangleInt32) </td></tr>
+<tr><td align="left" balign="left"> + setRect(x : double, y : double, width : double, height : double) </td></tr>
+<tr><td align="left" balign="left"> + reshape(x : int, y : int, width : int, height : int) </td></tr>
+<tr><td align="left" balign="left"> - doubleToInt(x : double, high : boolean) : int </td></tr>
+<tr><td align="left" balign="left"> + equals(obj : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getLocation() : Point </td></tr>
+<tr><td align="left" balign="left"> + setSize(width : int, height : int) </td></tr>
+<tr><td align="left" balign="left"> + resize(width : int, height : int) </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + outcode(x : double, y : double) : int </td></tr>
+<tr><td align="left" balign="left"> + inside(x : int, y : int) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.geometry.RectangularShape
+	c75 [label=<<table title="lejos.robotics.geometry.RectangularShape" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> RectangularShape </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + RectangularShape() </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getX() : double </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getY() : double </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getWidth() : double </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getHeight() : double </font></td></tr>
+<tr><td align="left" balign="left"> + getMinX() : double </td></tr>
+<tr><td align="left" balign="left"> + getMinY() : double </td></tr>
+<tr><td align="left" balign="left"> + getMaxX() : double </td></tr>
+<tr><td align="left" balign="left"> + getMaxY() : double </td></tr>
+<tr><td align="left" balign="left"> + getCenterX() : double </td></tr>
+<tr><td align="left" balign="left"> + getCenterY() : double </td></tr>
+<tr><td align="left" balign="left"> + getFrame() : Rectangle2D </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + isEmpty() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setFrame(x : double, y : double, w : double, h : double) </font></td></tr>
+<tr><td align="left" balign="left"> + setFrame(r : Rectangle2D) </td></tr>
+<tr><td align="left" balign="left"> + contains(p : Point2D) : boolean </td></tr>
+<tr><td align="left" balign="left"> + intersects(r : Rectangle2D) : boolean </td></tr>
+<tr><td align="left" balign="left"> + contains(r : Rectangle2D) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getBounds() : RectangleInt32 </td></tr>
+<tr><td align="left" balign="left"> + clone() : Object </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.geometry.Shape
+	c76 [label=<<table title="lejos.robotics.geometry.Shape" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Shape </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getBounds() : RectangleInt32 </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getBounds2D() : Rectangle2D </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contains(x : double, y : double) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contains(p : Point2D) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + intersects(x : double, y : double, w : double, h : double) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + intersects(r : Rectangle2D) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contains(x : double, y : double, w : double, h : double) : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + contains(r : Rectangle2D) : boolean </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.subsumption.Arbitrator
+	c77 [label=<<table title="lejos.robotics.subsumption.Arbitrator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Arbitrator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - NONE : int </td></tr>
+<tr><td align="left" balign="left"> - _behavior : Behavior[] </td></tr>
+<tr><td align="left" balign="left"> - _highestPriority : int </td></tr>
+<tr><td align="left" balign="left"> - _active : int </td></tr>
+<tr><td align="left" balign="left"> - _returnWhenInactive : boolean </td></tr>
+<tr><td align="left" balign="left"> + keepRunning : boolean </td></tr>
+<tr><td align="left" balign="left"> - monitor : Arbitrator.Monitor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Arbitrator(behaviorList : Behavior[], returnWhenInactive : boolean) </td></tr>
+<tr><td align="left" balign="left"> + Arbitrator(behaviorList : Behavior[]) </td></tr>
+<tr><td align="left" balign="left"> + go() </td></tr>
+<tr><td align="left" balign="left"> + stop() </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.subsumption.Arbitrator.Monitor
+	c78 [label=<<table title="lejos.robotics.subsumption.Arbitrator.Monitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Monitor </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> ~ more : boolean </td></tr>
+<tr><td align="left" balign="left"> ~ maxPriority : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - Monitor() </td></tr>
+<tr><td align="left" balign="left"> + run() </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.robotics.subsumption.Behavior
+	c79 [label=<<table title="lejos.robotics.subsumption.Behavior" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Behavior </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + takeControl() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + action() </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + suppress() </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.utility.Delay
-	c37 [label=<<table title="lejos.utility.Delay" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c80 [label=<<table title="lejos.utility.Delay" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Delay </td></tr>
 		</table></td></tr>
@@ -702,69 +1644,385 @@ digraph G {
 <tr><td align="left" balign="left"> + nsDelay(period : long) </td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.utility.EndianTools
+	c81 [label=<<table title="lejos.utility.EndianTools" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> EndianTools </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + EndianTools() </td></tr>
+<tr><td align="left" balign="left"> + decodeLongBE(b : byte[], off : int) : long </td></tr>
+<tr><td align="left" balign="left"> + decodeUIntBE(b : byte[], off : int) : long </td></tr>
+<tr><td align="left" balign="left"> + decodeUShortBE(b : byte[], off : int) : int </td></tr>
+<tr><td align="left" balign="left"> + decodeIntBE(b : byte[], off : int) : int </td></tr>
+<tr><td align="left" balign="left"> + decodeShortBE(b : byte[], off : int) : short </td></tr>
+<tr><td align="left" balign="left"> + decodeLongLE(b : byte[], off : int) : long </td></tr>
+<tr><td align="left" balign="left"> + decodeUIntLE(b : byte[], off : int) : long </td></tr>
+<tr><td align="left" balign="left"> + decodeUShortLE(b : byte[], off : int) : int </td></tr>
+<tr><td align="left" balign="left"> + decodeIntLE(b : byte[], off : int) : int </td></tr>
+<tr><td align="left" balign="left"> + decodeShortLE(b : byte[], off : int) : short </td></tr>
+<tr><td align="left" balign="left"> + encodeLongBE(v : long, b : byte[], off : int) </td></tr>
+<tr><td align="left" balign="left"> + encodeIntBE(v : int, b : byte[], off : int) </td></tr>
+<tr><td align="left" balign="left"> + encodeShortBE(v : int, b : byte[], off : int) </td></tr>
+<tr><td align="left" balign="left"> + encodeLongLE(v : long, b : byte[], off : int) </td></tr>
+<tr><td align="left" balign="left"> + encodeIntLE(v : int, b : byte[], off : int) </td></tr>
+<tr><td align="left" balign="left"> + encodeShortLE(v : int, b : byte[], off : int) </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.utility.GyroDirectionFinder
+	c82 [label=<<table title="lejos.utility.GyroDirectionFinder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> GyroDirectionFinder </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - cartesianCalibrate : float </td></tr>
+<tr><td align="left" balign="left"> - heading : float </td></tr>
+<tr><td align="left" balign="left"> - acceleration : float </td></tr>
+<tr><td align="left" balign="left"> - calibrating : boolean </td></tr>
+<tr><td align="left" balign="left"> - reg : GyroDirectionFinder.Regulator </td></tr>
+<tr><td align="left" balign="left"> - gyro : Gyroscope </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + GyroDirectionFinder(gyro : Gyroscope) </td></tr>
+<tr><td align="left" balign="left"> + GyroDirectionFinder(gyro : Gyroscope, calibrate : boolean) </td></tr>
+<tr><td align="left" balign="left"> + setDegrees(heading : float) </td></tr>
+<tr><td align="left" balign="left"> + getDegrees() : float </td></tr>
+<tr><td align="left" balign="left"> + getAngularVelocity() : float </td></tr>
+<tr><td align="left" balign="left"> + getAngularAcceleration() : float </td></tr>
+<tr><td align="left" balign="left"> + getDegreesCartesian() : float </td></tr>
+<tr><td align="left" balign="left"> + setDegreesCartesian(heading : float) </td></tr>
+<tr><td align="left" balign="left"> + resetCartesianZero() </td></tr>
+<tr><td align="left" balign="left"> + startCalibration() </td></tr>
+<tr><td align="left" balign="left"> + stopCalibration() </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.utility.GyroDirectionFinder.Regulator
+	c83 [label=<<table title="lejos.utility.GyroDirectionFinder.Regulator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Regulator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> # Regulator() </td></tr>
+<tr><td align="left" balign="left"> + run() </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.utility.Integration
+	c84 [label=<<table title="lejos.utility.Integration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Integration </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - lastReadingMillis : long </td></tr>
+<tr><td align="left" balign="left"> - lastReading : double </td></tr>
+<tr><td align="left" balign="left"> - integral : double </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Integration(initialValue : double, reading : double) </td></tr>
+<tr><td align="left" balign="left"> + addReading(reading : double) : double </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.utility.KalmanFilter
+	c85 [label=<<table title="lejos.utility.KalmanFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> KalmanFilter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - a : Matrix </td></tr>
+<tr><td align="left" balign="left"> - b : Matrix </td></tr>
+<tr><td align="left" balign="left"> - c : Matrix </td></tr>
+<tr><td align="left" balign="left"> - i : Matrix </td></tr>
+<tr><td align="left" balign="left"> - q : Matrix </td></tr>
+<tr><td align="left" balign="left"> - r : Matrix </td></tr>
+<tr><td align="left" balign="left"> - at : Matrix </td></tr>
+<tr><td align="left" balign="left"> - ct : Matrix </td></tr>
+<tr><td align="left" balign="left"> - mu : Matrix </td></tr>
+<tr><td align="left" balign="left"> - sigma : Matrix </td></tr>
+<tr><td align="left" balign="left"> - muBar : Matrix </td></tr>
+<tr><td align="left" balign="left"> - sigmaBar : Matrix </td></tr>
+<tr><td align="left" balign="left"> - gain : Matrix </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + KalmanFilter(a : Matrix, b : Matrix, c : Matrix, q : Matrix, r : Matrix) </td></tr>
+<tr><td align="left" balign="left"> + setState(mean : Matrix, covariance : Matrix) </td></tr>
+<tr><td align="left" balign="left"> + update(control : Matrix, measurement : Matrix) </td></tr>
+<tr><td align="left" balign="left"> + getMean() : Matrix </td></tr>
+<tr><td align="left" balign="left"> + getCovariance() : Matrix </td></tr>
+<tr><td align="left" balign="left"> + getPredictedMean() : Matrix </td></tr>
+<tr><td align="left" balign="left"> + getPredictedCovariance() : Matrix </td></tr>
+<tr><td align="left" balign="left"> + getGain() : Matrix </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.utility.LUDecomposition
+	c86 [label=<<table title="lejos.utility.LUDecomposition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> LUDecomposition </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - serialVersionUID : long </td></tr>
+<tr><td align="left" balign="left"> - LU : double[][] </td></tr>
+<tr><td align="left" balign="left"> - m : int </td></tr>
+<tr><td align="left" balign="left"> - n : int </td></tr>
+<tr><td align="left" balign="left"> - pivsign : int </td></tr>
+<tr><td align="left" balign="left"> - piv : int[] </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LUDecomposition(A : Matrix) </td></tr>
+<tr><td align="left" balign="left"> + isNonsingular() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getL() : Matrix </td></tr>
+<tr><td align="left" balign="left"> + getU() : Matrix </td></tr>
+<tr><td align="left" balign="left"> + getPivot() : int[] </td></tr>
+<tr><td align="left" balign="left"> + getDoublePivot() : double[] </td></tr>
+<tr><td align="left" balign="left"> + det() : double </td></tr>
+<tr><td align="left" balign="left"> + solve(B : Matrix) : Matrix </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.utility.Matrix
+	c87 [label=<<table title="lejos.utility.Matrix" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Matrix </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - serialVersionUID : long </td></tr>
+<tr><td align="left" balign="left"> - A : double[][] </td></tr>
+<tr><td align="left" balign="left"> - m : int </td></tr>
+<tr><td align="left" balign="left"> - n : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Matrix(m : int, n : int) </td></tr>
+<tr><td align="left" balign="left"> + Matrix(m : int, n : int, s : double) </td></tr>
+<tr><td align="left" balign="left"> + Matrix(A : double[][]) </td></tr>
+<tr><td align="left" balign="left"> + Matrix(A : double[][], m : int, n : int) </td></tr>
+<tr><td align="left" balign="left"> + Matrix(vals : double[], m : int) </td></tr>
+<tr><td align="left" balign="left"> + constructWithCopy(A : double[][]) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + copy() : Matrix </td></tr>
+<tr><td align="left" balign="left"> + clone() : Object </td></tr>
+<tr><td align="left" balign="left"> + getArray() : double[][] </td></tr>
+<tr><td align="left" balign="left"> + getArrayCopy() : double[][] </td></tr>
+<tr><td align="left" balign="left"> + getColumnPackedCopy() : double[] </td></tr>
+<tr><td align="left" balign="left"> + getRowPackedCopy() : double[] </td></tr>
+<tr><td align="left" balign="left"> + getRowDimension() : int </td></tr>
+<tr><td align="left" balign="left"> + getColumnDimension() : int </td></tr>
+<tr><td align="left" balign="left"> + get(i : int, j : int) : double </td></tr>
+<tr><td align="left" balign="left"> + getMatrix(i0 : int, i1 : int, j0 : int, j1 : int) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + getMatrix(r : int[], c : int[]) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + getMatrix(i0 : int, i1 : int, c : int[]) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + getMatrix(r : int[], j0 : int, j1 : int) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + set(i : int, j : int, s : double) </td></tr>
+<tr><td align="left" balign="left"> + setMatrix(i0 : int, i1 : int, j0 : int, j1 : int, X : Matrix) </td></tr>
+<tr><td align="left" balign="left"> + setMatrix(r : int[], c : int[], X : Matrix) </td></tr>
+<tr><td align="left" balign="left"> + setMatrix(r : int[], j0 : int, j1 : int, X : Matrix) </td></tr>
+<tr><td align="left" balign="left"> + setMatrix(i0 : int, i1 : int, c : int[], X : Matrix) </td></tr>
+<tr><td align="left" balign="left"> + transpose() : Matrix </td></tr>
+<tr><td align="left" balign="left"> + norm1() : double </td></tr>
+<tr><td align="left" balign="left"> + normInf() : double </td></tr>
+<tr><td align="left" balign="left"> + normF() : double </td></tr>
+<tr><td align="left" balign="left"> + uminus() : Matrix </td></tr>
+<tr><td align="left" balign="left"> + plus(B : Matrix) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + plusEquals(B : Matrix) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + minus(B : Matrix) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + minusEquals(B : Matrix) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + arrayTimes(B : Matrix) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + arrayTimesEquals(B : Matrix) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + arrayRightDivide(B : Matrix) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + arrayRightDivideEquals(B : Matrix) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + arrayLeftDivide(B : Matrix) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + arrayLeftDivideEquals(B : Matrix) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + times(s : double) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + timesEquals(s : double) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + times(B : Matrix) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + trace() : double </td></tr>
+<tr><td align="left" balign="left"> + random(m : int, n : int) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + identity(m : int, n : int) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + inverse() : Matrix </td></tr>
+<tr><td align="left" balign="left"> + solve(B : Matrix) : Matrix </td></tr>
+<tr><td align="left" balign="left"> + print(out : PrintStream) </td></tr>
+<tr><td align="left" balign="left"> - checkMatrixDimensions(B : Matrix) </td></tr>
+<tr><td align="left" balign="left"> - hypot(a : double, b : double) : double </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.utility.Stopwatch
+	c88 [label=<<table title="lejos.utility.Stopwatch" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Stopwatch </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - t0 : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Stopwatch() </td></tr>
+<tr><td align="left" balign="left"> + reset() </td></tr>
+<tr><td align="left" balign="left"> + elapsed() : int </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.utility.Timer
+	c89 [label=<<table title="lejos.utility.Timer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Timer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - myListener : TimerListener </td></tr>
+<tr><td align="left" balign="left"> - myThread : Thread </td></tr>
+<tr><td align="left" balign="left"> - delay : int </td></tr>
+<tr><td align="left" balign="left"> - running : boolean </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Timer(theDelay : int, el : TimerListener) </td></tr>
+<tr><td align="left" balign="left"> + getDelay() : int </td></tr>
+<tr><td align="left" balign="left"> + setDelay(newDelay : int) </td></tr>
+<tr><td align="left" balign="left"> + stop() </td></tr>
+<tr><td align="left" balign="left"> + start() </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.utility.TimerListener
+	c90 [label=<<table title="lejos.utility.TimerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> TimerListener </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + timedOut() </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	//lejos.hardware.Audio implements lejos.hardware.Sounds
+	c6:p -> c0:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.hardware.lcd.GraphicsLCD implements lejos.hardware.lcd.CommonLCD
+	c7:p -> c8:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.hardware.lcd.TextLCD implements lejos.hardware.lcd.CommonLCD
+	c7:p -> c9:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.AccelerometerAdapter extends lejos.robotics.filter.AbstractFilter
+	c39:p -> c13:p [dir=back,arrowtail=empty];
+	//lejos.robotics.AccelerometerAdapter implements lejos.robotics.Accelerometer
+	c12:p -> c13:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.DCMotor implements lejos.robotics.BaseMotor
-	c2:p -> c6:p [dir=back,arrowtail=empty,style=dashed];
-	//lejos.robotics.RegulatedMotor implements lejos.robotics.BaseMotor
-	c2:p -> c9:p [dir=back,arrowtail=empty,style=dashed];
-	//lejos.robotics.RegulatedMotor implements lejos.robotics.Tachometer
-	c11:p -> c9:p [dir=back,arrowtail=empty,style=dashed];
-	//lejos.robotics.Tachometer implements lejos.robotics.Encoder
-	c7:p -> c11:p [dir=back,arrowtail=empty,style=dashed];
-	//lejos.robotics.filter.AbstractCalibrationFilter extends lejos.robotics.filter.AbstractFilter
-	c14:p -> c12:p [dir=back,arrowtail=empty];
-	//lejos.robotics.filter.AbstractCalibrationFilter implements lejos.robotics.Calibrate
-	c3:p -> c12:p [dir=back,arrowtail=empty,style=dashed];
-	//lejos.robotics.filter.AbstractCalibrationFilter.CalibrationFileException extends java.lang.RuntimeException
-	c38:p -> c13:p [dir=back,arrowtail=empty];
-	//lejos.robotics.filter.AbstractFilter implements lejos.robotics.SampleProvider
-	c10:p -> c14:p [dir=back,arrowtail=empty,style=dashed];
-	//lejos.robotics.filter.ConcatenationFilter implements lejos.robotics.SampleProvider
-	c10:p -> c15:p [dir=back,arrowtail=empty,style=dashed];
-	//lejos.robotics.filter.IntegrationFilter extends lejos.robotics.filter.AbstractFilter
-	c14:p -> c17:p [dir=back,arrowtail=empty];
-	//lejos.robotics.filter.LinearCalibrationFilter extends lejos.robotics.filter.AbstractCalibrationFilter
-	c12:p -> c18:p [dir=back,arrowtail=empty];
-	//lejos.robotics.filter.LowPassFilter extends lejos.robotics.filter.AbstractFilter
-	c14:p -> c19:p [dir=back,arrowtail=empty];
-	//lejos.robotics.filter.MaximumFilter extends lejos.robotics.filter.SampleBuffer
-	c28:p -> c20:p [dir=back,arrowtail=empty];
-	//lejos.robotics.filter.MeanFilter extends lejos.robotics.filter.SumFilter
-	c33:p -> c21:p [dir=back,arrowtail=empty];
-	//lejos.robotics.filter.MedianFilter extends lejos.robotics.filter.SampleBuffer
-	c28:p -> c22:p [dir=back,arrowtail=empty];
-	//lejos.robotics.filter.MinimumFilter extends lejos.robotics.filter.SampleBuffer
-	c28:p -> c23:p [dir=back,arrowtail=empty];
-	//lejos.robotics.filter.ModulusFilter extends lejos.robotics.filter.AbstractFilter
-	c14:p -> c24:p [dir=back,arrowtail=empty];
-	//lejos.robotics.filter.OffsetCorrectionFilter extends lejos.robotics.filter.AbstractFilter
-	c14:p -> c25:p [dir=back,arrowtail=empty];
-	//lejos.robotics.filter.PublishedSource.Listener extends java.lang.Thread
+	c14:p -> c18:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.DirectionFinder implements lejos.robotics.Calibrate
+	c15:p -> c19:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.DirectionFinderAdapter implements lejos.robotics.DirectionFinder
+	c19:p -> c20:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.RangeFinderAdapter extends lejos.robotics.filter.AbstractFilter
 	c39:p -> c27:p [dir=back,arrowtail=empty];
+	//lejos.robotics.RangeFinderAdapter implements lejos.robotics.RangeFinder
+	c26:p -> c27:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.RangeReadings extends java.util.ArrayList<lejos.robotics.RangeReading>
+	c91:p -> c29:p [dir=back,arrowtail=empty];
+	//lejos.robotics.RangeReadings implements lejos.robotics.Transmittable
+	c36:p -> c29:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.RegulatedMotor implements lejos.robotics.BaseMotor
+	c14:p -> c31:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.RegulatedMotor implements lejos.robotics.EV3DevBaseMotor
+	c21:p -> c31:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.RegulatedMotor implements lejos.robotics.Tachometer
+	c34:p -> c31:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.Tachometer implements lejos.robotics.Encoder
+	c22:p -> c34:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.filter.AbstractCalibrationFilter extends lejos.robotics.filter.AbstractFilter
+	c39:p -> c37:p [dir=back,arrowtail=empty];
+	//lejos.robotics.filter.AbstractCalibrationFilter implements lejos.robotics.Calibrate
+	c15:p -> c37:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.filter.AbstractCalibrationFilter.CalibrationFileException extends java.lang.RuntimeException
+	c92:p -> c38:p [dir=back,arrowtail=empty];
+	//lejos.robotics.filter.AbstractFilter implements lejos.robotics.SampleProvider
+	c33:p -> c39:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.filter.ConcatenationFilter implements lejos.robotics.SampleProvider
+	c33:p -> c40:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.filter.IntegrationFilter extends lejos.robotics.filter.AbstractFilter
+	c39:p -> c42:p [dir=back,arrowtail=empty];
+	//lejos.robotics.filter.LinearCalibrationFilter extends lejos.robotics.filter.AbstractCalibrationFilter
+	c37:p -> c43:p [dir=back,arrowtail=empty];
+	//lejos.robotics.filter.LowPassFilter extends lejos.robotics.filter.AbstractFilter
+	c39:p -> c44:p [dir=back,arrowtail=empty];
+	//lejos.robotics.filter.MaximumFilter extends lejos.robotics.filter.SampleBuffer
+	c53:p -> c45:p [dir=back,arrowtail=empty];
+	//lejos.robotics.filter.MeanFilter extends lejos.robotics.filter.SumFilter
+	c58:p -> c46:p [dir=back,arrowtail=empty];
+	//lejos.robotics.filter.MedianFilter extends lejos.robotics.filter.SampleBuffer
+	c53:p -> c47:p [dir=back,arrowtail=empty];
+	//lejos.robotics.filter.MinimumFilter extends lejos.robotics.filter.SampleBuffer
+	c53:p -> c48:p [dir=back,arrowtail=empty];
+	//lejos.robotics.filter.ModulusFilter extends lejos.robotics.filter.AbstractFilter
+	c39:p -> c49:p [dir=back,arrowtail=empty];
+	//lejos.robotics.filter.OffsetCorrectionFilter extends lejos.robotics.filter.AbstractFilter
+	c39:p -> c50:p [dir=back,arrowtail=empty];
+	//lejos.robotics.filter.PublishedSource.Listener extends java.lang.Thread
+	c93:p -> c52:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.SampleBuffer extends lejos.robotics.filter.AbstractFilter
-	c14:p -> c28:p [dir=back,arrowtail=empty];
+	c39:p -> c53:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.SampleThread extends lejos.robotics.filter.AbstractFilter
-	c14:p -> c29:p [dir=back,arrowtail=empty];
+	c39:p -> c54:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.SampleThread.Runner extends java.lang.Thread
-	c39:p -> c30:p [dir=back,arrowtail=empty];
+	c93:p -> c55:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.SliceFilter extends lejos.robotics.filter.AbstractFilter
-	c14:p -> c31:p [dir=back,arrowtail=empty];
+	c39:p -> c56:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.SubscribedProvider implements lejos.robotics.SampleProvider
-	c10:p -> c32:p [dir=back,arrowtail=empty,style=dashed];
+	c33:p -> c57:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.filter.SumFilter extends lejos.robotics.filter.AbstractFilter
-	c14:p -> c33:p [dir=back,arrowtail=empty];
+	c39:p -> c58:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.SumFilter.PlainSum extends lejos.robotics.filter.SampleBuffer
-	c28:p -> c34:p [dir=back,arrowtail=empty];
+	c53:p -> c59:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.SumFilter.SmartSum extends lejos.robotics.filter.SampleBuffer
-	c28:p -> c35:p [dir=back,arrowtail=empty];
+	c53:p -> c60:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.ZeroFilter extends lejos.robotics.filter.AbstractFilter
-	c14:p -> c36:p [dir=back,arrowtail=empty];
+	c39:p -> c61:p [dir=back,arrowtail=empty];
+	//lejos.robotics.geometry.Line extends lejos.robotics.geometry.Line2D.Float
+	c64:p -> c62:p [dir=back,arrowtail=empty];
+	//lejos.robotics.geometry.Line2D implements lejos.robotics.geometry.Shape
+	c76:p -> c63:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.geometry.Line2D implements java.lang.Cloneable
+	c94:p -> c63:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.geometry.Line2D.Float extends lejos.robotics.geometry.Line2D
+	c63:p -> c64:p [dir=back,arrowtail=empty];
+	//lejos.robotics.geometry.Line2D.Double extends lejos.robotics.geometry.Line2D
+	c63:p -> c65:p [dir=back,arrowtail=empty];
+	//lejos.robotics.geometry.Point extends lejos.robotics.geometry.Point2D.Float
+	c68:p -> c66:p [dir=back,arrowtail=empty];
+	//lejos.robotics.geometry.Point2D implements java.lang.Cloneable
+	c94:p -> c67:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.geometry.Point2D.Float extends lejos.robotics.geometry.Point2D
+	c67:p -> c68:p [dir=back,arrowtail=empty];
+	//lejos.robotics.geometry.Point2D.Double extends lejos.robotics.geometry.Point2D
+	c67:p -> c69:p [dir=back,arrowtail=empty];
+	//lejos.robotics.geometry.Rectangle extends lejos.robotics.geometry.Rectangle2D.Float
+	c72:p -> c70:p [dir=back,arrowtail=empty];
+	//lejos.robotics.geometry.Rectangle2D extends lejos.robotics.geometry.RectangularShape
+	c75:p -> c71:p [dir=back,arrowtail=empty];
+	//lejos.robotics.geometry.Rectangle2D.Float extends lejos.robotics.geometry.Rectangle2D
+	c71:p -> c72:p [dir=back,arrowtail=empty];
+	//lejos.robotics.geometry.Rectangle2D.Double extends lejos.robotics.geometry.Rectangle2D
+	c71:p -> c73:p [dir=back,arrowtail=empty];
+	//lejos.robotics.geometry.RectangleInt32 extends lejos.robotics.geometry.Rectangle2D
+	c71:p -> c74:p [dir=back,arrowtail=empty];
+	//lejos.robotics.geometry.RectangularShape implements lejos.robotics.geometry.Shape
+	c76:p -> c75:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.geometry.RectangularShape implements java.lang.Cloneable
+	c94:p -> c75:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.robotics.subsumption.Arbitrator.Monitor extends java.lang.Thread
+	c93:p -> c78:p [dir=back,arrowtail=empty];
+	//lejos.utility.GyroDirectionFinder implements lejos.robotics.DirectionFinder
+	c19:p -> c82:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.utility.GyroDirectionFinder.Regulator extends java.lang.Thread
+	c93:p -> c83:p [dir=back,arrowtail=empty];
+	//lejos.utility.LUDecomposition implements java.io.Serializable
+	c95:p -> c86:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.utility.Matrix implements java.lang.Cloneable
+	c94:p -> c87:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.utility.Matrix implements java.io.Serializable
+	c95:p -> c87:p [dir=back,arrowtail=empty,style=dashed];
 	// java.lang.Thread
-	c39 [label=<<table title="java.lang.Thread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Thread.html">
+	c93 [label=<<table title="java.lang.Thread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Thread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Thread </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> - name : char[] </td></tr>
+<tr><td align="left" balign="left"> - name : String </td></tr>
 <tr><td align="left" balign="left"> - priority : int </td></tr>
 <tr><td align="left" balign="left"> - threadQ : Thread </td></tr>
 <tr><td align="left" balign="left"> - eetop : long </td></tr>
@@ -807,6 +2065,7 @@ digraph G {
 <tr><td align="left" balign="left"> + Thread(arg0 : Runnable, arg1 : String) </td></tr>
 <tr><td align="left" balign="left"> + Thread(arg0 : ThreadGroup, arg1 : Runnable, arg2 : String) </td></tr>
 <tr><td align="left" balign="left"> + Thread(arg0 : ThreadGroup, arg1 : Runnable, arg2 : String, arg3 : long) </td></tr>
+<tr><td align="left" balign="left"> + Thread(arg0 : ThreadGroup, arg1 : Runnable, arg2 : String, arg3 : long, arg4 : boolean) </td></tr>
 <tr><td align="left" balign="left"> - registerNatives() </td></tr>
 <tr><td align="left" balign="left"> - nextThreadNum() : int </td></tr>
 <tr><td align="left" balign="left"> - nextThreadID() : long </td></tr>
@@ -815,8 +2074,9 @@ digraph G {
 <tr><td align="left" balign="left"> + yield() </td></tr>
 <tr><td align="left" balign="left"> + sleep(arg0 : long) </td></tr>
 <tr><td align="left" balign="left"> + sleep(arg0 : long, arg1 : int) </td></tr>
+<tr><td align="left" balign="left"> + onSpinWait() </td></tr>
 <tr><td align="left" balign="left"> - init(arg0 : ThreadGroup, arg1 : Runnable, arg2 : String, arg3 : long) </td></tr>
-<tr><td align="left" balign="left"> - init(arg0 : ThreadGroup, arg1 : Runnable, arg2 : String, arg3 : long, arg4 : AccessControlContext) </td></tr>
+<tr><td align="left" balign="left"> - init(arg0 : ThreadGroup, arg1 : Runnable, arg2 : String, arg3 : long, arg4 : AccessControlContext, arg5 : boolean) </td></tr>
 <tr><td align="left" balign="left"> # clone() : Object </td></tr>
 <tr><td align="left" balign="left"> + start() </td></tr>
 <tr><td align="left" balign="left"> - start0() </td></tr>
@@ -873,8 +2133,86 @@ digraph G {
 <tr><td align="left" balign="left"> - setNativeName(arg0 : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Thread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// java.io.Serializable
+	c95 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Serializable </td></tr>
+		</table></td></tr>
+		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// java.util.ArrayList<E>
+	c91 [label=<<table title="java.util.ArrayList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/ArrayList.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ArrayList&lt;E&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - serialVersionUID : long </td></tr>
+<tr><td align="left" balign="left"> - DEFAULT_CAPACITY : int </td></tr>
+<tr><td align="left" balign="left"> - EMPTY_ELEMENTDATA : Object[] </td></tr>
+<tr><td align="left" balign="left"> - DEFAULTCAPACITY_EMPTY_ELEMENTDATA : Object[] </td></tr>
+<tr><td align="left" balign="left"> ~ elementData : Object[] </td></tr>
+<tr><td align="left" balign="left"> - size : int </td></tr>
+<tr><td align="left" balign="left"> - MAX_ARRAY_SIZE : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ArrayList(arg0 : int) </td></tr>
+<tr><td align="left" balign="left"> + ArrayList() </td></tr>
+<tr><td align="left" balign="left"> + ArrayList(arg0 : Collection&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + trimToSize() </td></tr>
+<tr><td align="left" balign="left"> + ensureCapacity(arg0 : int) </td></tr>
+<tr><td align="left" balign="left"> - grow(arg0 : int) : Object[] </td></tr>
+<tr><td align="left" balign="left"> - grow() : Object[] </td></tr>
+<tr><td align="left" balign="left"> - newCapacity(arg0 : int) : int </td></tr>
+<tr><td align="left" balign="left"> - hugeCapacity(arg0 : int) : int </td></tr>
+<tr><td align="left" balign="left"> + size() : int </td></tr>
+<tr><td align="left" balign="left"> + isEmpty() : boolean </td></tr>
+<tr><td align="left" balign="left"> + contains(arg0 : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + indexOf(arg0 : Object) : int </td></tr>
+<tr><td align="left" balign="left"> + lastIndexOf(arg0 : Object) : int </td></tr>
+<tr><td align="left" balign="left"> + clone() : Object </td></tr>
+<tr><td align="left" balign="left"> + toArray() : Object[] </td></tr>
+<tr><td align="left" balign="left"> + toArray(arg0 : T[]) : T[] </td></tr>
+<tr><td align="left" balign="left"> ~ elementData(arg0 : int) : E </td></tr>
+<tr><td align="left" balign="left"> ~ elementAt(arg0 : Object[], arg1 : int) : E </td></tr>
+<tr><td align="left" balign="left"> + get(arg0 : int) : E </td></tr>
+<tr><td align="left" balign="left"> + set(arg0 : int, arg1 : E) : E </td></tr>
+<tr><td align="left" balign="left"> - add(arg0 : E, arg1 : Object[], arg2 : int) </td></tr>
+<tr><td align="left" balign="left"> + add(arg0 : E) : boolean </td></tr>
+<tr><td align="left" balign="left"> + add(arg0 : int, arg1 : E) </td></tr>
+<tr><td align="left" balign="left"> + remove(arg0 : int) : E </td></tr>
+<tr><td align="left" balign="left"> + remove(arg0 : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> - fastRemove(arg0 : int) </td></tr>
+<tr><td align="left" balign="left"> + clear() </td></tr>
+<tr><td align="left" balign="left"> + addAll(arg0 : Collection&lt;?&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + addAll(arg0 : int, arg1 : Collection&lt;?&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> # removeRange(arg0 : int, arg1 : int) </td></tr>
+<tr><td align="left" balign="left"> - shiftTailOverGap(arg0 : Object[], arg1 : int, arg2 : int) </td></tr>
+<tr><td align="left" balign="left"> - rangeCheckForAdd(arg0 : int) </td></tr>
+<tr><td align="left" balign="left"> - outOfBoundsMsg(arg0 : int) : String </td></tr>
+<tr><td align="left" balign="left"> - outOfBoundsMsg(arg0 : int, arg1 : int) : String </td></tr>
+<tr><td align="left" balign="left"> + removeAll(arg0 : Collection&lt;?&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + retainAll(arg0 : Collection&lt;?&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> ~ batchRemove(arg0 : Collection&lt;?&gt;, arg1 : boolean, arg2 : int, arg3 : int) : boolean </td></tr>
+<tr><td align="left" balign="left"> - writeObject(arg0 : ObjectOutputStream) </td></tr>
+<tr><td align="left" balign="left"> - readObject(arg0 : ObjectInputStream) </td></tr>
+<tr><td align="left" balign="left"> + listIterator(arg0 : int) : ListIterator&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + listIterator() : ListIterator&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + iterator() : Iterator&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + subList(arg0 : int, arg1 : int) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + forEach(arg0 : Consumer&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> + spliterator() : Spliterator&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> - nBits(arg0 : int) : long[] </td></tr>
+<tr><td align="left" balign="left"> - setBit(arg0 : long[], arg1 : int) </td></tr>
+<tr><td align="left" balign="left"> - isClear(arg0 : long[], arg1 : int) : boolean </td></tr>
+<tr><td align="left" balign="left"> + removeIf(arg0 : Predicate&lt;?&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> ~ removeIf(arg0 : Predicate&lt;?&gt;, arg1 : int, arg2 : int) : boolean </td></tr>
+<tr><td align="left" balign="left"> + replaceAll(arg0 : UnaryOperator&lt;E&gt;) </td></tr>
+<tr><td align="left" balign="left"> + sort(arg0 : Comparator&lt;?&gt;) </td></tr>
+<tr><td align="left" balign="left"> ~ checkInvariants() </td></tr>
+		</table></td></tr>
+		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/java/util/ArrayList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.lang.RuntimeException
-	c38 [label=<<table title="java.lang.RuntimeException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/RuntimeException.html">
+	c92 [label=<<table title="java.lang.RuntimeException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/RuntimeException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RuntimeException </td></tr>
 		</table></td></tr>
@@ -889,5 +2227,12 @@ digraph G {
 <tr><td align="left" balign="left"> # RuntimeException(arg0 : String, arg1 : Throwable, arg2 : boolean, arg3 : boolean) </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/RuntimeException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// java.lang.Cloneable
+	c94 [label=<<table title="java.lang.Cloneable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Cloneable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Cloneable </td></tr>
+		</table></td></tr>
+		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Cloneable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 }
 

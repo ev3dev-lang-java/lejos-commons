@@ -1,3 +1,12 @@
+# v0.5.0 2017-06-03
+
+- Adding Sounds & Audio
+- Adding Power
+- Adding LCD
+- Adding Buttons
+- Adding LEDs
+- Adding EV3DevBaseMotor <- Innovation
+
 # v0.4.0 2017-03-23
 
 - Remove dependency logback & lombok
