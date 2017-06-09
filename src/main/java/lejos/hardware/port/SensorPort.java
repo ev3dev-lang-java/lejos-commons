@@ -1,5 +1,7 @@
 package lejos.hardware.port;
 
+import lejos.internals.EV3DevPort;
+
 /**
  * Basic interface for EV3 sensors ports.
  * 
@@ -8,9 +10,9 @@ package lejos.hardware.port;
  *
  */
 public interface SensorPort {
-	
-    String S1 = "S1";
-    String S2 = "S2";
-    String S3 = "S3";
-    String S4 = "S4";
+
+    Port S1 = new EV3DevPort("S1", EV3DevPort.SENSOR_PORT, 0);
+    Port S2 = new EV3DevPort("S2", EV3DevPort.SENSOR_PORT, 1);
+    Port S3 = new EV3DevPort("S3", EV3DevPort.SENSOR_PORT, 2);
+    Port S4 = new EV3DevPort("S4", EV3DevPort.SENSOR_PORT, 3);
 }
