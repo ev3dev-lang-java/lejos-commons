@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.6.0 2017-09-06
+
+- Adding Port support
+- Adding LeJOS LICENCE GPL v3
+
 ## v0.5.0 2017-06-03
 
 - Adding Sounds & Audio
