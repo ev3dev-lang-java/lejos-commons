@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.7.0 2018-03-12
+
+- Adding GPS support
+
 ## v0.6.0 2017-09-06
 
 - Adding Port support
