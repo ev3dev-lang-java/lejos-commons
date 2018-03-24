@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.7.1 2018-03-24
+
+- SensorModes & SensorMode
+
 ## v0.7.0 2018-03-12
 
 - Adding GPS support
