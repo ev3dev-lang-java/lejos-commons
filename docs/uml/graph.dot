@@ -158,8 +158,310 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.gps.Coordinates
+	c7 [label=<<table title="lejos.hardware.gps.Coordinates" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Coordinates </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - latitude : double </td></tr>
+<tr><td align="left" balign="left"> - longitude : double </td></tr>
+<tr><td align="left" balign="left"> - altitude : double </td></tr>
+<tr><td align="left" balign="left"> + DD_MM : int </td></tr>
+<tr><td align="left" balign="left"> + DD_MM_SS : int </td></tr>
+<tr><td align="left" balign="left"> ~ EARTH_RADIUS : double </td></tr>
+<tr><td align="left" balign="left"> ~ calculatedDistance : float </td></tr>
+<tr><td align="left" balign="left"> ~ calculatedAzimuth : float </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Coordinates(latitude : double, longitude : double, altitude : double) </td></tr>
+<tr><td align="left" balign="left"> + Coordinates(latitude : double, longitude : double) </td></tr>
+<tr><td align="left" balign="left"> + getLatitude() : double </td></tr>
+<tr><td align="left" balign="left"> + setLatitude(latitude : double) </td></tr>
+<tr><td align="left" balign="left"> + setLongitude(longitude : double) </td></tr>
+<tr><td align="left" balign="left"> + getLongitude() : double </td></tr>
+<tr><td align="left" balign="left"> + setAltitude(altitude : double) </td></tr>
+<tr><td align="left" balign="left"> + getAltitude() : double </td></tr>
+<tr><td align="left" balign="left"> + azimuthTo(to : Coordinates) : double </td></tr>
+<tr><td align="left" balign="left"> + convert(coordinate : double, outputType : int) : String </td></tr>
+<tr><td align="left" balign="left"> - dropTrailingZeros(number : int) : String </td></tr>
+<tr><td align="left" balign="left"> + convert(coordinate : String) : double </td></tr>
+<tr><td align="left" balign="left"> - convertIsValidChar(element : char) : boolean </td></tr>
+<tr><td align="left" balign="left"> - convertSplit(in : String) : String[] </td></tr>
+<tr><td align="left" balign="left"> + distance(to : Coordinates) : double </td></tr>
+<tr><td align="left" balign="left"> - calculateDistanceAndAzimuth(d : double, d1 : double, d2 : double, d3 : double) </td></tr>
+<tr><td align="left" balign="left"> - mod(d : double, d1 : double) : double </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.gps.GGASentence
+	c8 [label=<<table title="lejos.hardware.gps.GGASentence" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> GGASentence </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - latitude : double </td></tr>
+<tr><td align="left" balign="left"> - longitude : double </td></tr>
+<tr><td align="left" balign="left"> - nmeaHeader : String </td></tr>
+<tr><td align="left" balign="left"> - dateTimeOfFix : int </td></tr>
+<tr><td align="left" balign="left"> - latitudeDirection : char </td></tr>
+<tr><td align="left" balign="left"> - longitudeDirection : char </td></tr>
+<tr><td align="left" balign="left"> - quality : int </td></tr>
+<tr><td align="left" balign="left"> - satellitesTracked : int </td></tr>
+<tr><td align="left" balign="left"> - hdop : float </td></tr>
+<tr><td align="left" balign="left"> - altitude : float </td></tr>
+<tr><td align="left" balign="left"> - altitudeUnits : String </td></tr>
+<tr><td align="left" balign="left"> - geoidalSeparation : float </td></tr>
+<tr><td align="left" balign="left"> - geoidalSeparationUnit : String </td></tr>
+<tr><td align="left" balign="left"> + HEADER : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + GGASentence() </td></tr>
+<tr><td align="left" balign="left"> # degreesMinToDegreesDbl(DD_MM : String, CoordinateType : int) : double </td></tr>
+<tr><td align="left" balign="left"> + getHeader() : String </td></tr>
+<tr><td align="left" balign="left"> + getLatitude() : double </td></tr>
+<tr><td align="left" balign="left"> + getLatitudeDirection() : char </td></tr>
+<tr><td align="left" balign="left"> + getLongitude() : double </td></tr>
+<tr><td align="left" balign="left"> + getLongitudeDirection() : char </td></tr>
+<tr><td align="left" balign="left"> + getAltitude() : float </td></tr>
+<tr><td align="left" balign="left"> + getTime() : int </td></tr>
+<tr><td align="left" balign="left"> + getSatellitesTracked() : int </td></tr>
+<tr><td align="left" balign="left"> + getFixQuality() : int </td></tr>
+<tr><td align="left" balign="left"> + getHDOP() : float </td></tr>
+<tr><td align="left" balign="left"> + parse(sentence : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.gps.GPS
+	c9 [label=<<table title="lejos.hardware.gps.GPS" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> GPS </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - rmcSentence : RMCSentence </td></tr>
+<tr><td align="left" balign="left"> - gsvSentence : GSVSentence </td></tr>
+<tr><td align="left" balign="left"> - date : Date </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + GPS(in : InputStream) </td></tr>
+<tr><td align="left" balign="left"> + getCompassDegrees() : float </td></tr>
+<tr><td align="left" balign="left"> + getDate() : Date </td></tr>
+<tr><td align="left" balign="left"> + getSatellite(index : int) : Satellite </td></tr>
+<tr><td align="left" balign="left"> + getSatellitesTracked() : int </td></tr>
+<tr><td align="left" balign="left"> + getSatellitesInView() : int </td></tr>
+<tr><td align="left" balign="left"> # sentenceChooser(header : String, s : String) </td></tr>
+<tr><td align="left" balign="left"> - updateTime() </td></tr>
+<tr><td align="left" balign="left"> - updateDate() </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.gps.GPSListener
+	c10 [label=<<table title="lejos.hardware.gps.GPSListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> GPSListener </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + sentenceReceived(sen : NMEASentence) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.gps.GSASentence
+	c11 [label=<<table title="lejos.hardware.gps.GSASentence" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> GSASentence </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - nmeaHeader : String </td></tr>
+<tr><td align="left" balign="left"> - mode : String </td></tr>
+<tr><td align="left" balign="left"> - modeValue : int </td></tr>
+<tr><td align="left" balign="left"> - MAXIMUMSV : int </td></tr>
+<tr><td align="left" balign="left"> - SV : int[] </td></tr>
+<tr><td align="left" balign="left"> - PDOP : float </td></tr>
+<tr><td align="left" balign="left"> - HDOP : float </td></tr>
+<tr><td align="left" balign="left"> - VDOP : float </td></tr>
+<tr><td align="left" balign="left"> + HEADER : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + GSASentence() </td></tr>
+<tr><td align="left" balign="left"> + getHeader() : String </td></tr>
+<tr><td align="left" balign="left"> + getMode() : String </td></tr>
+<tr><td align="left" balign="left"> + getModeValue() : int </td></tr>
+<tr><td align="left" balign="left"> + getPRN() : int[] </td></tr>
+<tr><td align="left" balign="left"> + getPDOP() : float </td></tr>
+<tr><td align="left" balign="left"> + getHDOP() : float </td></tr>
+<tr><td align="left" balign="left"> + getVDOP() : float </td></tr>
+<tr><td align="left" balign="left"> + parse(sentence : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.gps.GSVSentence
+	c12 [label=<<table title="lejos.hardware.gps.GSVSentence" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> GSVSentence </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - nmeaHeader : String </td></tr>
+<tr><td align="left" balign="left"> - satellitesInView : int </td></tr>
+<tr><td align="left" balign="left"> - MAXIMUMSATELLITES : int </td></tr>
+<tr><td align="left" balign="left"> - ns1 : Satellite </td></tr>
+<tr><td align="left" balign="left"> - ns2 : Satellite </td></tr>
+<tr><td align="left" balign="left"> - ns3 : Satellite </td></tr>
+<tr><td align="left" balign="left"> - ns4 : Satellite </td></tr>
+<tr><td align="left" balign="left"> + HEADER : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + GSVSentence() </td></tr>
+<tr><td align="left" balign="left"> + getHeader() : String </td></tr>
+<tr><td align="left" balign="left"> + getSatellitesInView() : int </td></tr>
+<tr><td align="left" balign="left"> + getSatellite(index : int) : Satellite </td></tr>
+<tr><td align="left" balign="left"> + parse(sentence : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.gps.NMEASentence
+	c13 [label=<<table title="lejos.hardware.gps.NMEASentence" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> NMEASentence </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LATITUDE : int </td></tr>
+<tr><td align="left" balign="left"> + LONGITUDE : int </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + NMEASentence() </td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getHeader() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> # parse(sentence : String) </font></td></tr>
+<tr><td align="left" balign="left"> # degreesMinToDegrees(DD_MM : String, CoordinateType : int) : float </td></tr>
+<tr><td align="left" balign="left"> + isNumeric(s : String) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.gps.RMCSentence
+	c14 [label=<<table title="lejos.hardware.gps.RMCSentence" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> RMCSentence </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - nmeaHeader : String </td></tr>
+<tr><td align="left" balign="left"> - dateTimeOfFix : int </td></tr>
+<tr><td align="left" balign="left"> - DATETIMELENGTH : int </td></tr>
+<tr><td align="left" balign="left"> - status : String </td></tr>
+<tr><td align="left" balign="left"> - ACTIVE : String </td></tr>
+<tr><td align="left" balign="left"> - VOID : String </td></tr>
+<tr><td align="left" balign="left"> - latitude : double </td></tr>
+<tr><td align="left" balign="left"> - latitudeDirection : String </td></tr>
+<tr><td align="left" balign="left"> - longitude : double </td></tr>
+<tr><td align="left" balign="left"> - longitudeDirection : String </td></tr>
+<tr><td align="left" balign="left"> - KNOT : float </td></tr>
+<tr><td align="left" balign="left"> - groundSpeed : float </td></tr>
+<tr><td align="left" balign="left"> - compassDegrees : float </td></tr>
+<tr><td align="left" balign="left"> - dateOfFix : int </td></tr>
+<tr><td align="left" balign="left"> - magneticVariation : float </td></tr>
+<tr><td align="left" balign="left"> - magneticVariationLetter : String </td></tr>
+<tr><td align="left" balign="left"> - speed : float </td></tr>
+<tr><td align="left" balign="left"> + HEADER : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + RMCSentence() </td></tr>
+<tr><td align="left" balign="left"> # degreesMinToDegreesDbl(DD_MM : String, CoordinateType : int) : double </td></tr>
+<tr><td align="left" balign="left"> + getHeader() : String </td></tr>
+<tr><td align="left" balign="left"> + getStatus() : String </td></tr>
+<tr><td align="left" balign="left"> + getLatitude() : double </td></tr>
+<tr><td align="left" balign="left"> + getLongitude() : double </td></tr>
+<tr><td align="left" balign="left"> + getSpeed() : float </td></tr>
+<tr><td align="left" balign="left"> + getTime() : int </td></tr>
+<tr><td align="left" balign="left"> + getDate() : int </td></tr>
+<tr><td align="left" balign="left"> + getCompassDegrees() : float </td></tr>
+<tr><td align="left" balign="left"> + parse(sentence : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.gps.Satellite
+	c15 [label=<<table title="lejos.hardware.gps.Satellite" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Satellite </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - PRN : int </td></tr>
+<tr><td align="left" balign="left"> - elevation : int </td></tr>
+<tr><td align="left" balign="left"> - azimuth : int </td></tr>
+<tr><td align="left" balign="left"> - SNR : int </td></tr>
+<tr><td align="left" balign="left"> - tracked : boolean </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Satellite() </td></tr>
+<tr><td align="left" balign="left"> + Satellite(p : int, e : int, a : int, s : int) </td></tr>
+<tr><td align="left" balign="left"> + getPRN() : int </td></tr>
+<tr><td align="left" balign="left"> + setPRN(p : int) </td></tr>
+<tr><td align="left" balign="left"> + getElevation() : int </td></tr>
+<tr><td align="left" balign="left"> + isTracked() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setTracked(tracked : boolean) </td></tr>
+<tr><td align="left" balign="left"> + setElevation(e : int) </td></tr>
+<tr><td align="left" balign="left"> + getAzimuth() : int </td></tr>
+<tr><td align="left" balign="left"> + setAzimuth(a : int) </td></tr>
+<tr><td align="left" balign="left"> + getSignalNoiseRatio() : int </td></tr>
+<tr><td align="left" balign="left"> + setSignalNoiseRatio(s : int) </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.gps.SimpleGPS
+	c16 [label=<<table title="lejos.hardware.gps.SimpleGPS" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SimpleGPS </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - in : InputStream </td></tr>
+<tr><td align="left" balign="left"> # ggaSentence : GGASentence </td></tr>
+<tr><td align="left" balign="left"> # vtgSentence : VTGSentence </td></tr>
+<tr><td align="left" balign="left"> # gsaSentence : GSASentence </td></tr>
+<tr><td align="left" balign="left"> - close : boolean </td></tr>
+<tr><td align="left" balign="left"> - listeners : ArrayList&lt;GPSListener&gt; </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SimpleGPS(in : InputStream) </td></tr>
+<tr><td align="left" balign="left"> + getLatitude() : double </td></tr>
+<tr><td align="left" balign="left"> + getLatitudeDirection() : char </td></tr>
+<tr><td align="left" balign="left"> + getLongitude() : double </td></tr>
+<tr><td align="left" balign="left"> + getLongitudeDirection() : char </td></tr>
+<tr><td align="left" balign="left"> + getAltitude() : float </td></tr>
+<tr><td align="left" balign="left"> + getSatellitesTracked() : int </td></tr>
+<tr><td align="left" balign="left"> + getFixMode() : int </td></tr>
+<tr><td align="left" balign="left"> + getTimeStamp() : int </td></tr>
+<tr><td align="left" balign="left"> + getSpeed() : float </td></tr>
+<tr><td align="left" balign="left"> + getCourse() : float </td></tr>
+<tr><td align="left" balign="left"> + getSelectionType() : String </td></tr>
+<tr><td align="left" balign="left"> + getFixType() : int </td></tr>
+<tr><td align="left" balign="left"> + getPRN() : int[] </td></tr>
+<tr><td align="left" balign="left"> + getPDOP() : float </td></tr>
+<tr><td align="left" balign="left"> + getHDOP() : float </td></tr>
+<tr><td align="left" balign="left"> + getVDOP() : float </td></tr>
+<tr><td align="left" balign="left"> + close() </td></tr>
+<tr><td align="left" balign="left"> # notifyListeners(sen : NMEASentence) </td></tr>
+<tr><td align="left" balign="left"> + addListener(listener : GPSListener) </td></tr>
+<tr><td align="left" balign="left"> + removeListener(listener : GPSListener) </td></tr>
+<tr><td align="left" balign="left"> + run() </td></tr>
+<tr><td align="left" balign="left"> - getNextString() : String </td></tr>
+<tr><td align="left" balign="left"> # sentenceChooser(header : String, s : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.gps.VTGSentence
+	c17 [label=<<table title="lejos.hardware.gps.VTGSentence" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> VTGSentence </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> - nmeaHeader : String </td></tr>
+<tr><td align="left" balign="left"> - KNOT : float </td></tr>
+<tr><td align="left" balign="left"> - speed : float </td></tr>
+<tr><td align="left" balign="left"> - trueCourse : float </td></tr>
+<tr><td align="left" balign="left"> - magneticCourse : float </td></tr>
+<tr><td align="left" balign="left"> + HEADER : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + VTGSentence() </td></tr>
+<tr><td align="left" balign="left"> + getHeader() : String </td></tr>
+<tr><td align="left" balign="left"> + getTrueCourse() : float </td></tr>
+<tr><td align="left" balign="left"> + getSpeed() : float </td></tr>
+<tr><td align="left" balign="left"> + parse(sentence : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.hardware.lcd.CommonLCD
-	c7 [label=<<table title="lejos.hardware.lcd.CommonLCD" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c18 [label=<<table title="lejos.hardware.lcd.CommonLCD" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CommonLCD </td></tr>
@@ -197,7 +499,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.hardware.lcd.GraphicsLCD
-	c8 [label=<<table title="lejos.hardware.lcd.GraphicsLCD" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c19 [label=<<table title="lejos.hardware.lcd.GraphicsLCD" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> GraphicsLCD </td></tr>
@@ -254,7 +556,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.hardware.lcd.TextLCD
-	c9 [label=<<table title="lejos.hardware.lcd.TextLCD" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c20 [label=<<table title="lejos.hardware.lcd.TextLCD" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TextLCD </td></tr>
@@ -277,7 +579,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.hardware.port.MotorPort
-	c10 [label=<<table title="lejos.hardware.port.MotorPort" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c21 [label=<<table title="lejos.hardware.port.MotorPort" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MotorPort </td></tr>
@@ -293,7 +595,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.hardware.port.Port
-	c11 [label=<<table title="lejos.hardware.port.Port" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c22 [label=<<table title="lejos.hardware.port.Port" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Port </td></tr>
@@ -306,7 +608,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.hardware.port.SensorPort
-	c12 [label=<<table title="lejos.hardware.port.SensorPort" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c23 [label=<<table title="lejos.hardware.port.SensorPort" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SensorPort </td></tr>
@@ -322,7 +624,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.hardware.sensor.EV3SensorConstants
-	c13 [label=<<table title="lejos.hardware.sensor.EV3SensorConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c24 [label=<<table title="lejos.hardware.sensor.EV3SensorConstants" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> EV3SensorConstants </td></tr>
@@ -385,8 +687,40 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.sensor.SensorMode
+	c25 [label=<<table title="lejos.hardware.sensor.SensorMode" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SensorMode </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getName() : String </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// lejos.hardware.sensor.SensorModes
+	c26 [label=<<table title="lejos.hardware.sensor.SensorModes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SensorModes </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getAvailableModes() : ArrayList&lt;String&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMode(mode : int) : SensorMode </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getMode(modeName : String) : SensorMode </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setCurrentMode(mode : int) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + setCurrentMode(modeName : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getCurrentMode() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="Helvetica-Oblique" point-size="10.0"> + getModeCount() : int </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.internals.EV3DevPort
-	c14 [label=<<table title="lejos.internals.EV3DevPort" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c27 [label=<<table title="lejos.internals.EV3DevPort" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EV3DevPort </td></tr>
 		</table></td></tr>
@@ -403,7 +737,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.Accelerometer
-	c15 [label=<<table title="lejos.robotics.Accelerometer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c28 [label=<<table title="lejos.robotics.Accelerometer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Accelerometer </td></tr>
@@ -418,7 +752,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.AccelerometerAdapter
-	c16 [label=<<table title="lejos.robotics.AccelerometerAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c29 [label=<<table title="lejos.robotics.AccelerometerAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AccelerometerAdapter </td></tr>
 		</table></td></tr>
@@ -434,7 +768,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.BaseMotor
-	c17 [label=<<table title="lejos.robotics.BaseMotor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c30 [label=<<table title="lejos.robotics.BaseMotor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> BaseMotor </td></tr>
@@ -451,7 +785,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.Calibrate
-	c18 [label=<<table title="lejos.robotics.Calibrate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c31 [label=<<table title="lejos.robotics.Calibrate" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Calibrate </td></tr>
@@ -465,7 +799,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.Color
-	c19 [label=<<table title="lejos.robotics.Color" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c32 [label=<<table title="lejos.robotics.Color" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Color </td></tr>
 		</table></td></tr>
@@ -495,7 +829,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.ColorIdentifier
-	c20 [label=<<table title="lejos.robotics.ColorIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c33 [label=<<table title="lejos.robotics.ColorIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ColorIdentifier </td></tr>
@@ -508,7 +842,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.DCMotor
-	c21 [label=<<table title="lejos.robotics.DCMotor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c34 [label=<<table title="lejos.robotics.DCMotor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DCMotor </td></tr>
@@ -522,7 +856,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.DirectionFinder
-	c22 [label=<<table title="lejos.robotics.DirectionFinder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c35 [label=<<table title="lejos.robotics.DirectionFinder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DirectionFinder </td></tr>
@@ -536,7 +870,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.DirectionFinderAdapter
-	c23 [label=<<table title="lejos.robotics.DirectionFinderAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c36 [label=<<table title="lejos.robotics.DirectionFinderAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DirectionFinderAdapter </td></tr>
 		</table></td></tr>
@@ -555,7 +889,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.EV3DevBaseMotor
-	c24 [label=<<table title="lejos.robotics.EV3DevBaseMotor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c37 [label=<<table title="lejos.robotics.EV3DevBaseMotor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> EV3DevBaseMotor </td></tr>
@@ -570,7 +904,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.Encoder
-	c25 [label=<<table title="lejos.robotics.Encoder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c38 [label=<<table title="lejos.robotics.Encoder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Encoder </td></tr>
@@ -584,7 +918,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.Gyroscope
-	c26 [label=<<table title="lejos.robotics.Gyroscope" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c39 [label=<<table title="lejos.robotics.Gyroscope" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Gyroscope </td></tr>
@@ -600,7 +934,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.LampController
-	c27 [label=<<table title="lejos.robotics.LampController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c40 [label=<<table title="lejos.robotics.LampController" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> LampController </td></tr>
@@ -616,7 +950,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.LightDetector
-	c28 [label=<<table title="lejos.robotics.LightDetector" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c41 [label=<<table title="lejos.robotics.LightDetector" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> LightDetector </td></tr>
@@ -632,7 +966,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.RangeFinder
-	c29 [label=<<table title="lejos.robotics.RangeFinder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c42 [label=<<table title="lejos.robotics.RangeFinder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RangeFinder </td></tr>
@@ -646,7 +980,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.RangeFinderAdapter
-	c30 [label=<<table title="lejos.robotics.RangeFinderAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c43 [label=<<table title="lejos.robotics.RangeFinderAdapter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RangeFinderAdapter </td></tr>
 		</table></td></tr>
@@ -660,7 +994,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.RangeReading
-	c31 [label=<<table title="lejos.robotics.RangeReading" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c44 [label=<<table title="lejos.robotics.RangeReading" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RangeReading </td></tr>
 		</table></td></tr>
@@ -676,7 +1010,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.RangeReadings
-	c32 [label=<<table title="lejos.robotics.RangeReadings" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c45 [label=<<table title="lejos.robotics.RangeReadings" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RangeReadings </td></tr>
 		</table></td></tr>
@@ -697,7 +1031,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.RangeScanner
-	c33 [label=<<table title="lejos.robotics.RangeScanner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c46 [label=<<table title="lejos.robotics.RangeScanner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RangeScanner </td></tr>
@@ -712,7 +1046,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.RegulatedMotor
-	c34 [label=<<table title="lejos.robotics.RegulatedMotor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c47 [label=<<table title="lejos.robotics.RegulatedMotor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RegulatedMotor </td></tr>
@@ -741,7 +1075,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.RegulatedMotorListener
-	c35 [label=<<table title="lejos.robotics.RegulatedMotorListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c48 [label=<<table title="lejos.robotics.RegulatedMotorListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RegulatedMotorListener </td></tr>
@@ -755,7 +1089,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.SampleProvider
-	c36 [label=<<table title="lejos.robotics.SampleProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c49 [label=<<table title="lejos.robotics.SampleProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SampleProvider </td></tr>
@@ -769,7 +1103,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.Tachometer
-	c37 [label=<<table title="lejos.robotics.Tachometer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c50 [label=<<table title="lejos.robotics.Tachometer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Tachometer </td></tr>
@@ -782,7 +1116,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.Touch
-	c38 [label=<<table title="lejos.robotics.Touch" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c51 [label=<<table title="lejos.robotics.Touch" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Touch </td></tr>
@@ -795,7 +1129,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.Transmittable
-	c39 [label=<<table title="lejos.robotics.Transmittable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c52 [label=<<table title="lejos.robotics.Transmittable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Transmittable </td></tr>
@@ -809,7 +1143,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.AbstractCalibrationFilter
-	c40 [label=<<table title="lejos.robotics.filter.AbstractCalibrationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c53 [label=<<table title="lejos.robotics.filter.AbstractCalibrationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractCalibrationFilter </font></td></tr>
 		</table></td></tr>
@@ -843,7 +1177,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.AbstractCalibrationFilter.CalibrationFileException
-	c41 [label=<<table title="lejos.robotics.filter.AbstractCalibrationFilter.CalibrationFileException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c54 [label=<<table title="lejos.robotics.filter.AbstractCalibrationFilter.CalibrationFileException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CalibrationFileException </td></tr>
 		</table></td></tr>
@@ -855,7 +1189,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.AbstractFilter
-	c42 [label=<<table title="lejos.robotics.filter.AbstractFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c55 [label=<<table title="lejos.robotics.filter.AbstractFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractFilter </font></td></tr>
 		</table></td></tr>
@@ -870,7 +1204,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.ConcatenationFilter
-	c43 [label=<<table title="lejos.robotics.filter.ConcatenationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c56 [label=<<table title="lejos.robotics.filter.ConcatenationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConcatenationFilter </td></tr>
 		</table></td></tr>
@@ -885,7 +1219,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.FilterTerminal
-	c44 [label=<<table title="lejos.robotics.filter.FilterTerminal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c57 [label=<<table title="lejos.robotics.filter.FilterTerminal" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FilterTerminal </td></tr>
 		</table></td></tr>
@@ -903,7 +1237,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.IntegrationFilter
-	c45 [label=<<table title="lejos.robotics.filter.IntegrationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c58 [label=<<table title="lejos.robotics.filter.IntegrationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> IntegrationFilter </td></tr>
 		</table></td></tr>
@@ -919,7 +1253,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.LinearCalibrationFilter
-	c46 [label=<<table title="lejos.robotics.filter.LinearCalibrationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c59 [label=<<table title="lejos.robotics.filter.LinearCalibrationFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LinearCalibrationFilter </td></tr>
 		</table></td></tr>
@@ -955,7 +1289,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.LowPassFilter
-	c47 [label=<<table title="lejos.robotics.filter.LowPassFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c60 [label=<<table title="lejos.robotics.filter.LowPassFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LowPassFilter </td></tr>
 		</table></td></tr>
@@ -971,7 +1305,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.MaximumFilter
-	c48 [label=<<table title="lejos.robotics.filter.MaximumFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c61 [label=<<table title="lejos.robotics.filter.MaximumFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MaximumFilter </td></tr>
 		</table></td></tr>
@@ -986,7 +1320,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.MeanFilter
-	c49 [label=<<table title="lejos.robotics.filter.MeanFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c62 [label=<<table title="lejos.robotics.filter.MeanFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MeanFilter </td></tr>
 		</table></td></tr>
@@ -999,7 +1333,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.MedianFilter
-	c50 [label=<<table title="lejos.robotics.filter.MedianFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c63 [label=<<table title="lejos.robotics.filter.MedianFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MedianFilter </td></tr>
 		</table></td></tr>
@@ -1012,7 +1346,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.MinimumFilter
-	c51 [label=<<table title="lejos.robotics.filter.MinimumFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c64 [label=<<table title="lejos.robotics.filter.MinimumFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MinimumFilter </td></tr>
 		</table></td></tr>
@@ -1027,7 +1361,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.ModulusFilter
-	c52 [label=<<table title="lejos.robotics.filter.ModulusFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c65 [label=<<table title="lejos.robotics.filter.ModulusFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ModulusFilter </td></tr>
 		</table></td></tr>
@@ -1042,7 +1376,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.OffsetCorrectionFilter
-	c53 [label=<<table title="lejos.robotics.filter.OffsetCorrectionFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c66 [label=<<table title="lejos.robotics.filter.OffsetCorrectionFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OffsetCorrectionFilter </td></tr>
 		</table></td></tr>
@@ -1072,7 +1406,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.PublishedSource
-	c54 [label=<<table title="lejos.robotics.filter.PublishedSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c67 [label=<<table title="lejos.robotics.filter.PublishedSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PublishedSource </td></tr>
 		</table></td></tr>
@@ -1113,7 +1447,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.PublishedSource.Listener
-	c55 [label=<<table title="lejos.robotics.filter.PublishedSource.Listener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c68 [label=<<table title="lejos.robotics.filter.PublishedSource.Listener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Listener </td></tr>
 		</table></td></tr>
@@ -1126,7 +1460,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SampleBuffer
-	c56 [label=<<table title="lejos.robotics.filter.SampleBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c69 [label=<<table title="lejos.robotics.filter.SampleBuffer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> SampleBuffer </font></td></tr>
 		</table></td></tr>
@@ -1147,7 +1481,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SampleThread
-	c57 [label=<<table title="lejos.robotics.filter.SampleThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c70 [label=<<table title="lejos.robotics.filter.SampleThread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SampleThread </td></tr>
 		</table></td></tr>
@@ -1169,7 +1503,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SampleThread.Runner
-	c58 [label=<<table title="lejos.robotics.filter.SampleThread.Runner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c71 [label=<<table title="lejos.robotics.filter.SampleThread.Runner" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Runner </td></tr>
 		</table></td></tr>
@@ -1182,7 +1516,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SliceFilter
-	c59 [label=<<table title="lejos.robotics.filter.SliceFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c72 [label=<<table title="lejos.robotics.filter.SliceFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SliceFilter </td></tr>
 		</table></td></tr>
@@ -1197,7 +1531,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SubscribedProvider
-	c60 [label=<<table title="lejos.robotics.filter.SubscribedProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c73 [label=<<table title="lejos.robotics.filter.SubscribedProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SubscribedProvider </td></tr>
 		</table></td></tr>
@@ -1225,7 +1559,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SumFilter
-	c61 [label=<<table title="lejos.robotics.filter.SumFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c74 [label=<<table title="lejos.robotics.filter.SumFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SumFilter </td></tr>
 		</table></td></tr>
@@ -1239,7 +1573,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SumFilter.PlainSum
-	c62 [label=<<table title="lejos.robotics.filter.SumFilter.PlainSum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c75 [label=<<table title="lejos.robotics.filter.SumFilter.PlainSum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PlainSum </td></tr>
 		</table></td></tr>
@@ -1252,7 +1586,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.SumFilter.SmartSum
-	c63 [label=<<table title="lejos.robotics.filter.SumFilter.SmartSum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c76 [label=<<table title="lejos.robotics.filter.SumFilter.SmartSum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SmartSum </td></tr>
 		</table></td></tr>
@@ -1270,7 +1604,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.filter.ZeroFilter
-	c64 [label=<<table title="lejos.robotics.filter.ZeroFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c77 [label=<<table title="lejos.robotics.filter.ZeroFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ZeroFilter </td></tr>
 		</table></td></tr>
@@ -1284,7 +1618,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.geometry.Line
-	c65 [label=<<table title="lejos.robotics.geometry.Line" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c78 [label=<<table title="lejos.robotics.geometry.Line" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Line </td></tr>
 		</table></td></tr>
@@ -1303,7 +1637,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.geometry.Line2D
-	c66 [label=<<table title="lejos.robotics.geometry.Line2D" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c79 [label=<<table title="lejos.robotics.geometry.Line2D" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Line2D </font></td></tr>
 		</table></td></tr>
@@ -1344,7 +1678,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.geometry.Line2D.Float
-	c67 [label=<<table title="lejos.robotics.geometry.Line2D.Float" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c80 [label=<<table title="lejos.robotics.geometry.Line2D.Float" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Float </td></tr>
 		</table></td></tr>
@@ -1369,7 +1703,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.geometry.Line2D.Double
-	c68 [label=<<table title="lejos.robotics.geometry.Line2D.Double" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c81 [label=<<table title="lejos.robotics.geometry.Line2D.Double" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Double </td></tr>
 		</table></td></tr>
@@ -1393,7 +1727,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.geometry.Point
-	c69 [label=<<table title="lejos.robotics.geometry.Point" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c82 [label=<<table title="lejos.robotics.geometry.Point" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Point </td></tr>
 		</table></td></tr>
@@ -1430,7 +1764,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.geometry.Point2D
-	c70 [label=<<table title="lejos.robotics.geometry.Point2D" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c83 [label=<<table title="lejos.robotics.geometry.Point2D" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Point2D </font></td></tr>
 		</table></td></tr>
@@ -1454,7 +1788,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.geometry.Point2D.Float
-	c71 [label=<<table title="lejos.robotics.geometry.Point2D.Float" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c84 [label=<<table title="lejos.robotics.geometry.Point2D.Float" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Float </td></tr>
 		</table></td></tr>
@@ -1473,7 +1807,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.geometry.Point2D.Double
-	c72 [label=<<table title="lejos.robotics.geometry.Point2D.Double" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c85 [label=<<table title="lejos.robotics.geometry.Point2D.Double" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Double </td></tr>
 		</table></td></tr>
@@ -1491,7 +1825,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.geometry.Rectangle
-	c73 [label=<<table title="lejos.robotics.geometry.Rectangle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c86 [label=<<table title="lejos.robotics.geometry.Rectangle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Rectangle </td></tr>
 		</table></td></tr>
@@ -1503,7 +1837,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.geometry.Rectangle2D
-	c74 [label=<<table title="lejos.robotics.geometry.Rectangle2D" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c87 [label=<<table title="lejos.robotics.geometry.Rectangle2D" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Rectangle2D </font></td></tr>
 		</table></td></tr>
@@ -1528,7 +1862,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.geometry.Rectangle2D.Float
-	c75 [label=<<table title="lejos.robotics.geometry.Rectangle2D.Float" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c88 [label=<<table title="lejos.robotics.geometry.Rectangle2D.Float" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Float </td></tr>
 		</table></td></tr>
@@ -1554,7 +1888,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.geometry.Rectangle2D.Double
-	c76 [label=<<table title="lejos.robotics.geometry.Rectangle2D.Double" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c89 [label=<<table title="lejos.robotics.geometry.Rectangle2D.Double" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Double </td></tr>
 		</table></td></tr>
@@ -1580,7 +1914,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.geometry.RectangleInt32
-	c77 [label=<<table title="lejos.robotics.geometry.RectangleInt32" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c90 [label=<<table title="lejos.robotics.geometry.RectangleInt32" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RectangleInt32 </td></tr>
 		</table></td></tr>
@@ -1623,7 +1957,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.geometry.RectangularShape
-	c78 [label=<<table title="lejos.robotics.geometry.RectangularShape" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c91 [label=<<table title="lejos.robotics.geometry.RectangularShape" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> RectangularShape </font></td></tr>
 		</table></td></tr>
@@ -1654,7 +1988,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.geometry.Shape
-	c79 [label=<<table title="lejos.robotics.geometry.Shape" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c92 [label=<<table title="lejos.robotics.geometry.Shape" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Shape </td></tr>
@@ -1674,7 +2008,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.subsumption.Arbitrator
-	c80 [label=<<table title="lejos.robotics.subsumption.Arbitrator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c93 [label=<<table title="lejos.robotics.subsumption.Arbitrator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Arbitrator </td></tr>
 		</table></td></tr>
@@ -1695,7 +2029,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.subsumption.Arbitrator.Monitor
-	c81 [label=<<table title="lejos.robotics.subsumption.Arbitrator.Monitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c94 [label=<<table title="lejos.robotics.subsumption.Arbitrator.Monitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Monitor </td></tr>
 		</table></td></tr>
@@ -1709,7 +2043,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.robotics.subsumption.Behavior
-	c82 [label=<<table title="lejos.robotics.subsumption.Behavior" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c95 [label=<<table title="lejos.robotics.subsumption.Behavior" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Behavior </td></tr>
@@ -1724,7 +2058,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.utility.Delay
-	c83 [label=<<table title="lejos.utility.Delay" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c96 [label=<<table title="lejos.utility.Delay" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Delay </td></tr>
 		</table></td></tr>
@@ -1739,7 +2073,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.utility.EndianTools
-	c84 [label=<<table title="lejos.utility.EndianTools" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c97 [label=<<table title="lejos.utility.EndianTools" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EndianTools </td></tr>
 		</table></td></tr>
@@ -1767,7 +2101,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.utility.GyroDirectionFinder
-	c85 [label=<<table title="lejos.utility.GyroDirectionFinder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c98 [label=<<table title="lejos.utility.GyroDirectionFinder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GyroDirectionFinder </td></tr>
 		</table></td></tr>
@@ -1794,7 +2128,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.utility.GyroDirectionFinder.Regulator
-	c86 [label=<<table title="lejos.utility.GyroDirectionFinder.Regulator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c99 [label=<<table title="lejos.utility.GyroDirectionFinder.Regulator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Regulator </td></tr>
 		</table></td></tr>
@@ -1807,7 +2141,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.utility.Integration
-	c87 [label=<<table title="lejos.utility.Integration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c100 [label=<<table title="lejos.utility.Integration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Integration </td></tr>
 		</table></td></tr>
@@ -1822,7 +2156,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.utility.KalmanFilter
-	c88 [label=<<table title="lejos.utility.KalmanFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c101 [label=<<table title="lejos.utility.KalmanFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> KalmanFilter </td></tr>
 		</table></td></tr>
@@ -1853,7 +2187,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.utility.LUDecomposition
-	c89 [label=<<table title="lejos.utility.LUDecomposition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c102 [label=<<table title="lejos.utility.LUDecomposition" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LUDecomposition </td></tr>
 		</table></td></tr>
@@ -1877,7 +2211,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.utility.Matrix
-	c90 [label=<<table title="lejos.utility.Matrix" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c103 [label=<<table title="lejos.utility.Matrix" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Matrix </td></tr>
 		</table></td></tr>
@@ -1941,7 +2275,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.utility.Stopwatch
-	c91 [label=<<table title="lejos.utility.Stopwatch" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c104 [label=<<table title="lejos.utility.Stopwatch" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Stopwatch </td></tr>
 		</table></td></tr>
@@ -1955,7 +2289,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.utility.Timer
-	c92 [label=<<table title="lejos.utility.Timer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c105 [label=<<table title="lejos.utility.Timer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Timer </td></tr>
 		</table></td></tr>
@@ -1974,7 +2308,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// lejos.utility.TimerListener
-	c93 [label=<<table title="lejos.utility.TimerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
+	c106 [label=<<table title="lejos.utility.TimerListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TimerListener </td></tr>
@@ -1988,132 +2322,152 @@ digraph G {
 		</table>>, URL="null", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//lejos.hardware.Audio implements lejos.hardware.Sounds
 	c6:p -> c0:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.hardware.gps.GGASentence extends lejos.hardware.gps.NMEASentence
+	c13:p -> c8:p [dir=back,arrowtail=empty];
+	//lejos.hardware.gps.GPS extends lejos.hardware.gps.SimpleGPS
+	c16:p -> c9:p [dir=back,arrowtail=empty];
+	//lejos.hardware.gps.GPSListener implements java.util.EventListener
+	c107:p -> c10:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.hardware.gps.GSASentence extends lejos.hardware.gps.NMEASentence
+	c13:p -> c11:p [dir=back,arrowtail=empty];
+	//lejos.hardware.gps.GSVSentence extends lejos.hardware.gps.NMEASentence
+	c13:p -> c12:p [dir=back,arrowtail=empty];
+	//lejos.hardware.gps.RMCSentence extends lejos.hardware.gps.NMEASentence
+	c13:p -> c14:p [dir=back,arrowtail=empty];
+	//lejos.hardware.gps.SimpleGPS extends java.lang.Thread
+	c108:p -> c16:p [dir=back,arrowtail=empty];
+	//lejos.hardware.gps.VTGSentence extends lejos.hardware.gps.NMEASentence
+	c13:p -> c17:p [dir=back,arrowtail=empty];
 	//lejos.hardware.lcd.GraphicsLCD implements lejos.hardware.lcd.CommonLCD
-	c7:p -> c8:p [dir=back,arrowtail=empty,style=dashed];
+	c18:p -> c19:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.hardware.lcd.TextLCD implements lejos.hardware.lcd.CommonLCD
-	c7:p -> c9:p [dir=back,arrowtail=empty,style=dashed];
+	c18:p -> c20:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.hardware.sensor.SensorMode implements lejos.robotics.SampleProvider
+	c49:p -> c25:p [dir=back,arrowtail=empty,style=dashed];
+	//lejos.hardware.sensor.SensorModes implements lejos.hardware.sensor.SensorMode
+	c25:p -> c26:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.internals.EV3DevPort implements lejos.hardware.port.Port
-	c11:p -> c14:p [dir=back,arrowtail=empty,style=dashed];
+	c22:p -> c27:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.AccelerometerAdapter extends lejos.robotics.filter.AbstractFilter
-	c42:p -> c16:p [dir=back,arrowtail=empty];
+	c55:p -> c29:p [dir=back,arrowtail=empty];
 	//lejos.robotics.AccelerometerAdapter implements lejos.robotics.Accelerometer
-	c15:p -> c16:p [dir=back,arrowtail=empty,style=dashed];
+	c28:p -> c29:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.DCMotor implements lejos.robotics.BaseMotor
-	c17:p -> c21:p [dir=back,arrowtail=empty,style=dashed];
+	c30:p -> c34:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.DirectionFinder implements lejos.robotics.Calibrate
-	c18:p -> c22:p [dir=back,arrowtail=empty,style=dashed];
+	c31:p -> c35:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.DirectionFinderAdapter implements lejos.robotics.DirectionFinder
-	c22:p -> c23:p [dir=back,arrowtail=empty,style=dashed];
+	c35:p -> c36:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.RangeFinderAdapter extends lejos.robotics.filter.AbstractFilter
-	c42:p -> c30:p [dir=back,arrowtail=empty];
+	c55:p -> c43:p [dir=back,arrowtail=empty];
 	//lejos.robotics.RangeFinderAdapter implements lejos.robotics.RangeFinder
-	c29:p -> c30:p [dir=back,arrowtail=empty,style=dashed];
+	c42:p -> c43:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.RangeReadings extends java.util.ArrayList<lejos.robotics.RangeReading>
-	c94:p -> c32:p [dir=back,arrowtail=empty];
+	c109:p -> c45:p [dir=back,arrowtail=empty];
 	//lejos.robotics.RangeReadings implements lejos.robotics.Transmittable
-	c39:p -> c32:p [dir=back,arrowtail=empty,style=dashed];
+	c52:p -> c45:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.RegulatedMotor implements lejos.robotics.BaseMotor
-	c17:p -> c34:p [dir=back,arrowtail=empty,style=dashed];
+	c30:p -> c47:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.RegulatedMotor implements lejos.robotics.EV3DevBaseMotor
-	c24:p -> c34:p [dir=back,arrowtail=empty,style=dashed];
+	c37:p -> c47:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.RegulatedMotor implements lejos.robotics.Tachometer
-	c37:p -> c34:p [dir=back,arrowtail=empty,style=dashed];
+	c50:p -> c47:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.Tachometer implements lejos.robotics.Encoder
-	c25:p -> c37:p [dir=back,arrowtail=empty,style=dashed];
+	c38:p -> c50:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.filter.AbstractCalibrationFilter extends lejos.robotics.filter.AbstractFilter
-	c42:p -> c40:p [dir=back,arrowtail=empty];
+	c55:p -> c53:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.AbstractCalibrationFilter implements lejos.robotics.Calibrate
-	c18:p -> c40:p [dir=back,arrowtail=empty,style=dashed];
+	c31:p -> c53:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.filter.AbstractCalibrationFilter.CalibrationFileException extends java.lang.RuntimeException
-	c95:p -> c41:p [dir=back,arrowtail=empty];
+	c110:p -> c54:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.AbstractFilter implements lejos.robotics.SampleProvider
-	c36:p -> c42:p [dir=back,arrowtail=empty,style=dashed];
+	c49:p -> c55:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.filter.ConcatenationFilter implements lejos.robotics.SampleProvider
-	c36:p -> c43:p [dir=back,arrowtail=empty,style=dashed];
+	c49:p -> c56:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.filter.IntegrationFilter extends lejos.robotics.filter.AbstractFilter
-	c42:p -> c45:p [dir=back,arrowtail=empty];
+	c55:p -> c58:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.LinearCalibrationFilter extends lejos.robotics.filter.AbstractCalibrationFilter
-	c40:p -> c46:p [dir=back,arrowtail=empty];
+	c53:p -> c59:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.LowPassFilter extends lejos.robotics.filter.AbstractFilter
-	c42:p -> c47:p [dir=back,arrowtail=empty];
+	c55:p -> c60:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.MaximumFilter extends lejos.robotics.filter.SampleBuffer
-	c56:p -> c48:p [dir=back,arrowtail=empty];
+	c69:p -> c61:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.MeanFilter extends lejos.robotics.filter.SumFilter
-	c61:p -> c49:p [dir=back,arrowtail=empty];
+	c74:p -> c62:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.MedianFilter extends lejos.robotics.filter.SampleBuffer
-	c56:p -> c50:p [dir=back,arrowtail=empty];
+	c69:p -> c63:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.MinimumFilter extends lejos.robotics.filter.SampleBuffer
-	c56:p -> c51:p [dir=back,arrowtail=empty];
+	c69:p -> c64:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.ModulusFilter extends lejos.robotics.filter.AbstractFilter
-	c42:p -> c52:p [dir=back,arrowtail=empty];
+	c55:p -> c65:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.OffsetCorrectionFilter extends lejos.robotics.filter.AbstractFilter
-	c42:p -> c53:p [dir=back,arrowtail=empty];
+	c55:p -> c66:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.PublishedSource.Listener extends java.lang.Thread
-	c96:p -> c55:p [dir=back,arrowtail=empty];
+	c108:p -> c68:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.SampleBuffer extends lejos.robotics.filter.AbstractFilter
-	c42:p -> c56:p [dir=back,arrowtail=empty];
+	c55:p -> c69:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.SampleThread extends lejos.robotics.filter.AbstractFilter
-	c42:p -> c57:p [dir=back,arrowtail=empty];
+	c55:p -> c70:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.SampleThread.Runner extends java.lang.Thread
-	c96:p -> c58:p [dir=back,arrowtail=empty];
+	c108:p -> c71:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.SliceFilter extends lejos.robotics.filter.AbstractFilter
-	c42:p -> c59:p [dir=back,arrowtail=empty];
+	c55:p -> c72:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.SubscribedProvider implements lejos.robotics.SampleProvider
-	c36:p -> c60:p [dir=back,arrowtail=empty,style=dashed];
+	c49:p -> c73:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.filter.SumFilter extends lejos.robotics.filter.AbstractFilter
-	c42:p -> c61:p [dir=back,arrowtail=empty];
+	c55:p -> c74:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.SumFilter.PlainSum extends lejos.robotics.filter.SampleBuffer
-	c56:p -> c62:p [dir=back,arrowtail=empty];
+	c69:p -> c75:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.SumFilter.SmartSum extends lejos.robotics.filter.SampleBuffer
-	c56:p -> c63:p [dir=back,arrowtail=empty];
+	c69:p -> c76:p [dir=back,arrowtail=empty];
 	//lejos.robotics.filter.ZeroFilter extends lejos.robotics.filter.AbstractFilter
-	c42:p -> c64:p [dir=back,arrowtail=empty];
+	c55:p -> c77:p [dir=back,arrowtail=empty];
 	//lejos.robotics.geometry.Line extends lejos.robotics.geometry.Line2D.Float
-	c67:p -> c65:p [dir=back,arrowtail=empty];
+	c80:p -> c78:p [dir=back,arrowtail=empty];
 	//lejos.robotics.geometry.Line2D implements lejos.robotics.geometry.Shape
-	c79:p -> c66:p [dir=back,arrowtail=empty,style=dashed];
+	c92:p -> c79:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.geometry.Line2D implements java.lang.Cloneable
-	c97:p -> c66:p [dir=back,arrowtail=empty,style=dashed];
+	c111:p -> c79:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.geometry.Line2D.Float extends lejos.robotics.geometry.Line2D
-	c66:p -> c67:p [dir=back,arrowtail=empty];
+	c79:p -> c80:p [dir=back,arrowtail=empty];
 	//lejos.robotics.geometry.Line2D.Double extends lejos.robotics.geometry.Line2D
-	c66:p -> c68:p [dir=back,arrowtail=empty];
+	c79:p -> c81:p [dir=back,arrowtail=empty];
 	//lejos.robotics.geometry.Point extends lejos.robotics.geometry.Point2D.Float
-	c71:p -> c69:p [dir=back,arrowtail=empty];
+	c84:p -> c82:p [dir=back,arrowtail=empty];
 	//lejos.robotics.geometry.Point2D implements java.lang.Cloneable
-	c97:p -> c70:p [dir=back,arrowtail=empty,style=dashed];
+	c111:p -> c83:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.geometry.Point2D.Float extends lejos.robotics.geometry.Point2D
-	c70:p -> c71:p [dir=back,arrowtail=empty];
+	c83:p -> c84:p [dir=back,arrowtail=empty];
 	//lejos.robotics.geometry.Point2D.Double extends lejos.robotics.geometry.Point2D
-	c70:p -> c72:p [dir=back,arrowtail=empty];
+	c83:p -> c85:p [dir=back,arrowtail=empty];
 	//lejos.robotics.geometry.Rectangle extends lejos.robotics.geometry.Rectangle2D.Float
-	c75:p -> c73:p [dir=back,arrowtail=empty];
+	c88:p -> c86:p [dir=back,arrowtail=empty];
 	//lejos.robotics.geometry.Rectangle2D extends lejos.robotics.geometry.RectangularShape
-	c78:p -> c74:p [dir=back,arrowtail=empty];
+	c91:p -> c87:p [dir=back,arrowtail=empty];
 	//lejos.robotics.geometry.Rectangle2D.Float extends lejos.robotics.geometry.Rectangle2D
-	c74:p -> c75:p [dir=back,arrowtail=empty];
+	c87:p -> c88:p [dir=back,arrowtail=empty];
 	//lejos.robotics.geometry.Rectangle2D.Double extends lejos.robotics.geometry.Rectangle2D
-	c74:p -> c76:p [dir=back,arrowtail=empty];
+	c87:p -> c89:p [dir=back,arrowtail=empty];
 	//lejos.robotics.geometry.RectangleInt32 extends lejos.robotics.geometry.Rectangle2D
-	c74:p -> c77:p [dir=back,arrowtail=empty];
+	c87:p -> c90:p [dir=back,arrowtail=empty];
 	//lejos.robotics.geometry.RectangularShape implements lejos.robotics.geometry.Shape
-	c79:p -> c78:p [dir=back,arrowtail=empty,style=dashed];
+	c92:p -> c91:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.geometry.RectangularShape implements java.lang.Cloneable
-	c97:p -> c78:p [dir=back,arrowtail=empty,style=dashed];
+	c111:p -> c91:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.robotics.subsumption.Arbitrator.Monitor extends java.lang.Thread
-	c96:p -> c81:p [dir=back,arrowtail=empty];
+	c108:p -> c94:p [dir=back,arrowtail=empty];
 	//lejos.utility.GyroDirectionFinder implements lejos.robotics.DirectionFinder
-	c22:p -> c85:p [dir=back,arrowtail=empty,style=dashed];
+	c35:p -> c98:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.utility.GyroDirectionFinder.Regulator extends java.lang.Thread
-	c96:p -> c86:p [dir=back,arrowtail=empty];
+	c108:p -> c99:p [dir=back,arrowtail=empty];
 	//lejos.utility.LUDecomposition implements java.io.Serializable
-	c98:p -> c89:p [dir=back,arrowtail=empty,style=dashed];
+	c112:p -> c102:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.utility.Matrix implements java.lang.Cloneable
-	c97:p -> c90:p [dir=back,arrowtail=empty,style=dashed];
+	c111:p -> c103:p [dir=back,arrowtail=empty,style=dashed];
 	//lejos.utility.Matrix implements java.io.Serializable
-	c98:p -> c90:p [dir=back,arrowtail=empty,style=dashed];
+	c112:p -> c103:p [dir=back,arrowtail=empty,style=dashed];
 	// java.lang.Thread
-	c96 [label=<<table title="java.lang.Thread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Thread.html">
+	c108 [label=<<table title="java.lang.Thread" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Thread.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Thread </td></tr>
 		</table></td></tr>
@@ -2230,14 +2584,21 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Thread.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.io.Serializable
-	c98 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
+	c112 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// java.util.EventListener
+	c107 [label=<<table title="java.util.EventListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/EventListener.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> EventListener </td></tr>
+		</table></td></tr>
+		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/java/util/EventListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.util.ArrayList<E>
-	c94 [label=<<table title="java.util.ArrayList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/ArrayList.html">
+	c109 [label=<<table title="java.util.ArrayList" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/util/ArrayList.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArrayList&lt;E&gt; </td></tr>
 		</table></td></tr>
@@ -2308,7 +2669,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/java/util/ArrayList.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.lang.RuntimeException
-	c95 [label=<<table title="java.lang.RuntimeException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/RuntimeException.html">
+	c110 [label=<<table title="java.lang.RuntimeException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/RuntimeException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RuntimeException </td></tr>
 		</table></td></tr>
@@ -2324,7 +2685,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/RuntimeException.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// java.lang.Cloneable
-	c97 [label=<<table title="java.lang.Cloneable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Cloneable.html">
+	c111 [label=<<table title="java.lang.Cloneable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Cloneable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Cloneable </td></tr>
