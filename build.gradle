@@ -1,11 +1,12 @@
 //Gradle file library ev3dev-lang-java // lejos-commons
 //Author: Juan Antonio Breña Moral
 
-version = '0.7.1'
+version = '0.7.2-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
+apply plugin: 'maven-publish'
 
 //Compile
 compileJava {
@@ -18,5 +19,34 @@ jar {
     baseName = "${rootProject.name}"
     manifest {
         from file("${projectDir}/src/main/resources/META-INF/MANIFEST.MF")
+    }
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier 'sources'
+    from sourceSets.main.allSource
+}
+
+//TODO Review failing classes in the next release
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.github.ev3dev-lang-java'
+            artifactId = 'ev3dev-lang-java'
+            version = "${version}"
+
+            from components.java
+            artifact (sourcesJar) {
+                classifier = 'sources'
+            }
+            //artifact (javadocJar) {
+            //    classifier = 'javadoc'
+            //}
+        }
     }
 }
