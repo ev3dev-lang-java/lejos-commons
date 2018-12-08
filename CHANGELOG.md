@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.7.3 2018-12-08
+
+Added travis support
+Added method drawOval
+
+## v0.7.2 2018-11-10
+
+Added sources support
+
 ## v0.7.1 2018-03-24
 
 - SensorModes & SensorMode
