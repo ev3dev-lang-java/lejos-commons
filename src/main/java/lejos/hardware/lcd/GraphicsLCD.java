@@ -358,4 +358,17 @@ public interface GraphicsLCD extends CommonLCD {
      */
     public void setColor(int red, int green, int blue);
 
+
+    /**
+     * Draws the outline of an oval. The result is a circle or ellipse that fits within the rectangle specified by the x, y, width, and height arguments.
+     *
+     * The oval covers an area that is width + 1 pixels wide and height + 1 pixels tall.
+     *
+     * @param x the x coordinate of the upper left corner of the oval to be drawn.
+     * @param y the y coordinate of the upper left corner of the oval to be drawn.
+     * @param width the width of the oval to be drawn.
+     * @param height the height of the oval to be drawn.
+     */
+    void drawOval(int x, int y, int width, int height);
+
 }
